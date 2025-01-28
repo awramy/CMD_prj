@@ -1,0 +1,7 @@
+@use '../../styles/mixins';
+
+.active {
+  @include mixins.indents(40);
+  @include mixins.font(_, 800);
+  border: 2px solid #646cff;
+ }

@@ -1,0 +1,23 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  // Стили для мобильных устройств
+  @media (max-width: 600px) {
+    padding: 10px;
+    max-width: 100%; // Полная ширина на мобильных устройствах
+  }
+
+  // Стили для планшетов
+  @media (min-width: 601px) and (max-width: 900px) {
+    padding: 15px;
+    max-width: 90%; // Ширина 90% на планшетах
+  }
+
+  // Стили для десктопов
+  @media (min-width: 901px) {
+    padding: 20px;
+    max-width: 1200px; // Ширина 1200px на десктопах
+  }
+}

@@ -1,0 +1,23 @@
+@mixin indents ($px: 10, $py: 5, $mx: 5, $my: 5) {
+  padding: $py + px $px + px;
+  margin: $my + px $mx + px;
+}
+@mixin font ($size: 1em, $weight: normal, $letter_space_em: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $letter_space_em + em;
+}
+@mixin flex_row ($gap: 3, $justify: center) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin flex_column ($gap: 3, $justify: center) {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  align-items: center;
+}
