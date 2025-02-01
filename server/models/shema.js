@@ -1,28 +1,33 @@
 import mongoose from "mongoose";
 
-let productSchema = new mongoose.Schema({
-  id: { type: String, required: true },
+const productSchema = new mongoose.Schema({
+  id: {type: Number,required: true,unique: true,},
+  name: {type: String,required: true,},
+  price: {type: Number,required: true,},
+  image: {},
+  description: { type: String, required: true,},
+  pattern: {
+    top: {type: String,required: true,},
+    left: {type: String,required: true,},
+  },
+});
+
+const userSchema = new mongoose.Schema({
+  id: { type: Number, required: true, unique: true },
   name: { type: String, required: true },
-  description: { type: String, required: false },
-  price: { type: Number, required: true },
-  img: { type: String, required: false },
-  info: { type: Array, required: false },
+  role: { type: String, required: true, default: "User" },
+  balance: { type: Number, required: true, default: 3000 },
 });
-let Product = mongoose.model("product", productSchema);
 
-let userSchema = new mongoose.Schema({
+const basketSchema = new mongoose.Schema({
   id: { type: String, required: true },
-  name: { type: String, required: true },
-  basket: { type: Array, required: false },
+  user_id: { type: String, required: true },
+  product_id: { type: String, required: true },
+  printImage: { type: String, required: false },
 });
-let User = mongoose.model("user", userSchema);
 
-let basketSchema = new mongoose.Schema({
-  id: { type: String, required: true },
-  userID: { type: String, required: true },
-  productID: { type: String, required: true },
-  imageID: { type: String, required: false },
-});
-let Basket = mongoose.model("basket", basketSchema);
+const Product = mongoose.model("Product", productSchema);
+const User = mongoose.model("User", userSchema);
+const Basket = mongoose.model("Basket", basketSchema);
 
-export default { Product, User, Basket };
+export { Product, User, Basket };

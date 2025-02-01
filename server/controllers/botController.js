@@ -1,22 +1,32 @@
-class botController {
+import { User } from '../models/shema.js';
+import userService from '../models/userId.js';
+
+class BotController {
   async sendMessage(msg, bot) {
     try {
-      const profilePhotos = await bot.getUserProfilePhotos(userId);
+      const chatId = msg.chat.id;
+      const userId = msg.from.id;
+      const username = msg.from.username || msg.from.first_name;
 
-      if (profilePhotos.total_count > 0 && profilePhotos.photos?.[0]?.[0]) {
-        const fileID = profilePhotos.photos[0][0].file_id;
-        const fileInfo = await bot.getFile(fileID);
-        const downloadedFile = await bot.downloadFile(fileInfo.file_id, './images');
-        
-        console.log("Фотография скачана:", downloadedFile);
+      userService.setUserId(userId);
+
+      console.log("Получено сообщение от пользователя:", { userId, username });
+
+      let user = await User.findOne({ id: userId });
+
+      if (!user) {
+        user = new User({
+          id: userId,
+          name: username,
+          role: "User", 
+          balance: 3000, 
+        });
+        await user.save();
+        console.log("Пользователь добавлен в базу данных:", user);
+      } else {
+        console.log("Пользователь уже существует:");
       }
 
-      const photo_url = msg.from.photo_url;
-      if (!photo_url) {
-        const generatedPhotoURL = `https://api.dicebear.com/6.x/lorelei/svg?seed=${Math.random()
-          .toString(36)
-          .substring(2, 15)}`;
-      }
 
       await bot.sendMessage(
         chatId,
@@ -28,4 +38,4 @@ class botController {
   }
 }
 
-export default new botController()
+export default new BotController();

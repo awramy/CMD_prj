@@ -1,13 +1,15 @@
-import schema from "../models/shema.js"; 
+import { User } from '../models/shema.js';
 
 class UserController {
   async createUser(req, res) {
     try {
-      const user = new schema.User({
+      const user = new User({
         id: req.body.id,
         name: req.body.name,
-        basket: req.body.basket || [],
+        role: req.body.role || "User",
+        balance:req.body.balance || 3000
       });
+      console.log(user)
       await user.save();
       res.status(201).send({ message: "Пользователь создан", user });
     } catch (error) {

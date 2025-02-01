@@ -1,9 +1,19 @@
+import express from 'express';
 import botController from "../controllers/botController.js";
-import userController from "../controllers/userController.js";
+import userController from '../controllers/userController.js';
 
 
 const botRouter = (bot) => {
-  bot.onText(/\/start/, (msg) => botController.sendMessage(msg, bot))
-  app.post("/createUser", userController.createUser);
-}
-export default botRouter;
+  const router = express.Router()
+
+  router.post("/createUser", userController.createUser);
+
+  bot.onText(/\/start/, (msg) => {
+    console.log("Получена команда /start");
+    botController.sendMessage(msg, bot);
+  });
+
+  return router;
+};
+
+export { botRouter };
