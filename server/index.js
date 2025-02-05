@@ -3,7 +3,9 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import TelegramBot from 'node-telegram-bot-api';
 import { botRouter } from './routes/botRouter.js';
-import requestsRouter from './routes/getRequests.js'
+import getRequests from './routes/getRequests.js'
+import postRequests from './routes/postRequests.js';
+import deleteRequests from './routes/deleteRequests.js'
 
 const app = express();
 const port = 3005;
@@ -27,6 +29,8 @@ app.listen(port, () => {
   console.log(`Сервер запущен: http://localhost:${port}`);
 });
 
-app.use('/', requestsRouter);
+app.use('/', getRequests);
+app.use('/', postRequests);
+app.use('/', deleteRequests);
 
 bot.on("polling_error", console.log);
