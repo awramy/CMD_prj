@@ -1,3 +1,2 @@
-@import
-  "styles/global",
-  "./styles/mixins";
+@use "styles/global";
+@use "styles/mixins";

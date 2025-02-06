@@ -1,9 +1,15 @@
 import container from './Container.module.scss'
+import * as React from "react";
 
-const Container = () => {
+interface ContainerProps {
+  children: React.ReactNode;
+}
+
+
+const Container: React.FC<ContainerProps> = ({children}) => {
   return (
     <div className={container.container}>
-
+      {children}
     </div>
   );
 };

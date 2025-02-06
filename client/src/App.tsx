@@ -1,14 +1,16 @@
 import './App.scss'
-import Button from "./components/Button/Button.tsx";
-import Input from "./components/Input/Input.tsx";
+import {Routes, Route, BrowserRouter as Router} from "react-router-dom";
+import Profile from "./pages/Profile.tsx";
+import * as React from "react";
 
-function App() {
+const App: React.FC = () => {
 
   return (
-    <>
-      <Button />
-      <Input />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Profile/>}/>
+      </Routes>
+    </Router>
   )
 }
 

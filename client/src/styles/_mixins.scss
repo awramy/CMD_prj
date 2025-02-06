@@ -1,4 +1,4 @@
-@mixin indents ($px: 10, $py: 5, $mx: 5, $my: 5) {
+@mixin indents ($px: 8, $py: 4, $mx: 4, $my: 4) {
   padding: $py + px $px + px;
   margin: $my + px $mx + px;
 }
@@ -7,17 +7,34 @@
   font-weight: $weight;
   letter-spacing: $letter_space_em + em;
 }
-@mixin flex_row ($gap: 3, $justify: center) {
+@mixin flex_row ($gap: 4, $justify: start, $wrap: wrap) {
   display: flex;
   flex-direction: row;
+  gap: $gap + px;
   flex-wrap: wrap;
   justify-content: $justify;
-  align-items: center;
 }
-@mixin flex_column ($gap: 3, $justify: center) {
+@mixin flex_column ($gap: 4, $justify: center, $align: center) {
   display: flex;
   flex-direction: column;
+  gap: $gap + px;
   flex-wrap: wrap;
   justify-content: $justify;
-  align-items: center;
+  align-items: $align;
+}
+@mixin border ($width: 2, $radius: 0, $color: #646cff) {
+  border: $width + px solid $color;
+  border-radius: $radius + px;
+}
+@mixin button ($px: 8, $py: 4, $bg_color: #646cff, $color: white) {
+  background: $bg_color;
+  color: $color;
+  padding: $py + px $px + px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
