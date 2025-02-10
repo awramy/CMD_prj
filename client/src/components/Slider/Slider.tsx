@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Slide from "../Slide/Slide.tsx";
+import css from "./Slider.module.scss"
 // @ts-ignore
 import 'swiper/css';
 import {observer} from "mobx-react-lite";
@@ -24,6 +25,7 @@ const Slider: FC = observer(() => {
 
   return (
     <Swiper
+      className={css.slider}
       spaceBetween={50} // Расстояние между слайдами
       slidesPerView={5} // Количество видимых слайдов
     >

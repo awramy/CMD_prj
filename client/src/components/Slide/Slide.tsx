@@ -1,6 +1,6 @@
 import {FC, useContext} from 'react';
 import css from './Slide.module.scss'
-import {UserContext} from "../../contexts/userContext.tsx";
+import {MainContext} from "../../contexts/mainContext.tsx";
 // @ts-ignore
 import 'swiper/css';
 import {observer} from "mobx-react-lite";
@@ -15,7 +15,7 @@ interface ISlideProps {
 const Slide: FC<ISlideProps> = observer(({image}) => {
 
   //вытаскиваем user из юзерКонтекста, используем для управления user.activePhoto
-  const context = useContext(UserContext);
+  const context = useContext(MainContext);
   if (!context) {
     return null;
   }

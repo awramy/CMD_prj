@@ -1,0 +1,295 @@
+
+.top_menu {
+  width: 100%;
+  height: var(--catalog-menu-height);
+  margin-top: var(--header-height);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .select_photo_cont {
+    background-color: var(--block-color);
+    position: relative;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
+
+    .select_photo_svg {
+      display: inline-block;
+      fill: var(--secondary-color);
+      padding: 5px;
+      margin: 0 0 5px 10px;
+      position: relative;
+      top: 5px;
+    }
+
+    .select_photo_text {
+      display: inline-block;
+      padding: 5px 25px 5px 5px;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .gradient {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-right: 5px;
+      height: 100%;
+      width: 15px;
+      //background-color: var(--main-color);
+      //position: relative;
+      overflow: hidden;
+
+      .effect {
+        position: absolute;
+        bottom: 0;
+        top: -40%;
+        left: -200%;
+        right: 0;
+        background: rgb(222, 0, 75);
+        background: linear-gradient(
+                        90deg,
+                        rgba(222, 0, 75, 1) 0%,
+                        rgba(191, 70, 255, 1) 49%,
+                        rgba(0, 212, 255, 1) 100%
+        );
+        border-radius: 40rem;
+        width: 8rem;
+        height: 8rem;
+        filter: blur(20px);
+        animation: effect infinite 3s linear;
+        opacity: 0.6;
+      }
+
+      @keyframes effect {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    .select_photo_butt {
+      position: absolute;
+      right: 5px;
+      bottom: -45px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100px;
+      height: 40px;
+      border: none;
+      padding: 0px 20px;
+      background-color: var(--main-color);
+      color: var(--text-color);
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 5px 5px 0 var(--secondary-color);
+      transition: 0.3s ease;
+      outline: none;
+      float: right;
+
+      &:hover {
+        color: transparent;
+        background-color: var(--hover-color);
+      }
+
+      &:hover svg {
+        fill: var(--block-color);
+        right: 40%;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
+      &:active {
+        transform: translate(3px, 3px);
+        box-shadow: 2px 2px 0 var(--focus-color);
+      }
+
+      svg {
+        fill: var(--text-color);
+        width: 18px;
+        position: absolute;
+        right: 0;
+        margin-right: 20px;
+        transition-duration: .3s;
+      }
+    }
+    .file_input {
+      display: none;
+    }
+
+    .top_decoration {
+      position: absolute;
+      left: 0;
+      top: -50px;
+      width: 100%;
+
+      .decor_items {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 5px;
+
+        .decor_item {
+          fill: var(--secondary-color);
+        }
+
+        .decor_item1 {
+          opacity: 0;
+          animation: show_item 1s forwards ease 1s;
+        }
+
+        .decor_item2 {
+          opacity: 0;
+          animation: show_item 1s forwards ease 3s;
+        }
+
+        .decor_item3 {
+          opacity: 0;
+          animation: show_item 1s forwards ease 5s;
+        }
+
+        .decor_item4 {
+          opacity: 0;
+          animation: show_item 1s forwards ease 7s;
+        }
+      }
+
+      .loader {
+        width: 100%;
+        height: 12px;
+        -webkit-mask: radial-gradient(circle closest-side, #000 64%, #0000) 0 0/25% 100%,
+        linear-gradient(#000 0 0) center/calc(100% - 12px) calc(100% - 10px) no-repeat;
+        background: linear-gradient(var(--main-color) 0 0) 0/0% no-repeat #ddd;
+        animation: load_animation 8s forwards ease-in-out;
+      }
+
+      @keyframes load_animation {
+        0% {
+          background-size: 0%;
+        }
+        8% {
+          background-size: 12.5%;
+        }
+        17% {
+          background-size: 14%
+        }
+        33% {
+          background-size: 37.5%
+        }
+        42% {
+          background-size: 39%
+        }
+        58% {
+          background-size: 62.5%
+        }
+        67% {
+          background-size: 64%
+        }
+        83% {
+          background-size: 87.5%
+        }
+        92% {
+          background-size: 89%
+        }
+        100% {
+          background-size: 100%
+        }
+      }
+      @keyframes show_item {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .open_gallery_cont {
+    width: 170px;
+    height: 160px;
+    position: relative; /* Для позиционирования псевдоэлементов */
+    padding: 20px; /* Отступы внутри блока */
+    display: flex;
+    align-items: center;
+
+    .open_gallery_block {
+      margin: 10px auto;
+      width: 100%;
+      height: 100%;
+      background-color: var(--hover-color);
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.5s ease;
+
+      .open_gallery_text {
+        width: 80%;
+        font-size: 1.4em;
+        font-weight: 600;
+        text-align: end;
+        float: right;
+        padding-right: 10px;
+        color: var(--background-color);
+      }
+      svg {
+        fill: var(--background-color);
+        position: absolute;
+        right: 16%;
+        bottom: -15%;
+        transform: rotate(-10deg);
+      }
+    }
+    &::before,
+    &::after {
+      content: ''; /* Создаём пустой элемент */
+      position: absolute;
+      width: 20%; /* Ширина линии */
+      height: 20%; /* Высота линии */
+      border: 10px solid var(--main-color); /* Толщина и цвет рамки */
+      pointer-events: none; /* Чтобы рамка не мешала взаимодействию с контентом */
+      transition: 0.3s ease;
+    }
+
+    &::before {
+      border-right: none; /* Убираем правую сторону */
+      border-bottom: none; /* Убираем нижнюю сторону */
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      border-left: none; /* Убираем левую сторону */
+      border-top: none; /* Убираем верхнюю сторону */
+      bottom: 0;
+      right: 0;
+    }
+
+    &:hover .open_gallery_block{
+      background-color: var(--focus-color);
+    }
+    &:hover::before,&:hover::after {
+      width: 30%; /* Ширина линии */
+      height: 30%; /* Высота линии */
+      border: 5px solid var(--secondary-color);
+    }
+
+    &:hover::before {
+      border-right: none; /* Убираем правую сторону */
+      border-bottom: none; /* Убираем нижнюю сторону */
+      top: 10px;
+      left: 10px;
+    }
+    &:hover::after {
+      border-left: none; /* Убираем правую сторону */
+      border-top: none; /* Убираем нижнюю сторону */
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+}

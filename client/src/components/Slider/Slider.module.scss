@@ -1,19 +1,3 @@
-@use '../../styles/mixins';
-
-
-.user_slider {
-  height: 100px;
-  //display: flex; /* Используем flexbox для горизонтального расположения изображений */
-  //width: 90vw; /* Ширина слайдера на всю ширину экрана */
-  //overflow: auto; /* Позволяет прокручивать содержимое */
-  //white-space: nowrap; /* Запрещает перенос строк */
-  //padding: 20px;
-  //background-color: #f0f0f0;
-  //border-radius: 8px;
-  //box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-  .user_photo {
-    height: 100px;
-    object-fit: contain;
-  }
+.slider {
+  margin-top: var(--header-height);
 }

@@ -1,0 +1,15 @@
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--header-background-color);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+
+  .logo {
+    height: 80%;
+  }
+}

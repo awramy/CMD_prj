@@ -3,7 +3,6 @@
 .container {
   min-width: 400px;
   margin: 0 auto;
-  padding: 20px 0;
 
   // Стили для мобильных устройств
   @media (max-width: 459px) {
@@ -14,7 +13,7 @@
   // Стили для планшетов
   @media (min-width: 460px) and (max-width: 900px) {
     @include mixins.flex_row($justify: center, $gap: 20);
-    max-width: 95%; // Ширина 90% на планшетах
+    max-width: 100%; // Ширина 90% на планшетах
   }
 
   // Стили для десктопов

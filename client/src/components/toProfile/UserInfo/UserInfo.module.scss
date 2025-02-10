@@ -1,0 +1,52 @@
+.user_info_cont {
+  display: flex;
+  flex-direction: row;
+  //justify-content: center;
+  //align-items: center;
+  margin-top: var(--header-height);
+  padding-top: 30px;
+  gap: 20px;
+
+  .user_photo {
+    width: 40%;
+    height: auto;
+    box-shadow: 5px 5px 0 var(--secondary-color);
+  }
+  .user_info {
+    display: flex;
+    flex-direction: column;
+    //background-color: var(--block-color);
+    align-items: flex-start;
+
+    p {
+      font-size: 2em;
+    }
+    .balance_info_title {
+      background-color: var(--secondary-color);
+      color: var(--background-color);
+      font-weight: 600;
+      padding: 0 5px 0 5px;
+      box-shadow: 5px 5px 0 var(--main-color);
+    }
+    .balance_info {
+
+      padding-top: 5px;
+      font-size: 1.2em;
+      font-weight: 600;
+
+      button {
+        display: inline-block;
+        margin-left: 10px;
+        background-color: var(--main-color);
+        padding: 0 5px 0 5px;
+        box-shadow: 2px 2px 0 var(--secondary-color);
+        outline: none;
+      }
+    }
+    svg {
+      stroke: var(--accent-color);
+      position: relative;
+      top: 6px;
+    }
+  }
+}

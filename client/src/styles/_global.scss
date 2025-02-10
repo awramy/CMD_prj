@@ -1,16 +1,23 @@
+@use 'variables' as *;
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --main-color: #{$main-color};
+  --text-color: #{$text-color};
+  --secondary-color: #{$secondary-color};
+  --hover-color: #{$hover-color};
+  --focus-color: #{$focus-color};
+  --background-color: #{$background-color};
+  --block-color: #{$block-color};
+  --header-height: #{$header-height};
+  --catalog-menu-height: #{$catalog_top-menu-height};
+  --header-background-color: #{$header-background-color};
+  --accent-color: #{$accent-color};
+
+  font-family: Roboto, serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light;
-  color: #213547;
-  background-color: #ffffff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 a {
@@ -30,14 +37,13 @@ body {
 }
 
 button {
-  border: 1px solid transparent;
+  border: none;
   padding: 5px 10px;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
