@@ -6,6 +6,7 @@ import { botRouter } from './routes/botRouter.js';
 import getRequests from './routes/getRequests.js'
 import postRequests from './routes/postRequests.js';
 import deleteRequests from './routes/deleteRequests.js'
+import fileUpload from 'express-fileupload'//для получения файлов с клиента
 
 const app = express();
 const port = 3005;
@@ -15,9 +16,10 @@ const bot = new TelegramBot(token, { polling: true });
 
 app.use(express.json());
 app.use(cors());
+app.use(fileUpload({}))
+// app.use(express.static(path.resolve(__dirname, 'static')))
 
-
-mongoose.connect('mongodb://localhost:27017/Bot')
+mongoose.connect('mongodb://127.0.0.1:27017/Bot')
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Failed to connect to MongoDB:', err));
 

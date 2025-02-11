@@ -6,6 +6,6 @@ const router = express.Router();
 
 
 router.post("/createBasket", basketController.createBasket)
-router.post("/createproduct", productController.createProduct)
+router.post("/products", productController.createProduct)
 
 export default router;

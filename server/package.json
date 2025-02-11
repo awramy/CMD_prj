@@ -15,10 +15,11 @@
     "cors": "^2.8.5",
     "espress": "^0.0.0",
     "express": "^4.21.2",
+    "express-fileupload": "^1.5.1",
     "mongoose": "^8.9.5",
     "node-telegram-bot-api": "^0.63.0",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "uuid": "^11.0.5"
   },
-  "devDependencies": {},
   "description": ""
 }

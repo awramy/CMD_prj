@@ -8,7 +8,6 @@ import {MainContext} from "../contexts/mainContext.tsx";
 import {observer} from "mobx-react-lite";
 import {toJS} from "mobx";
 
-
 const Catalog = observer(() => {
 
   const { products } = useContext(MainContext);

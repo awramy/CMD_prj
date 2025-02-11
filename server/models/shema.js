@@ -3,12 +3,9 @@ import mongoose from "mongoose";
 const productSchema = new mongoose.Schema({
   name:  {type: String,required: true,},
   price: {type: Number,required: true,},
-  image: {},
+  image: {type: String,required: true,},
   description: { type: String, required: true,},
-  pattern: {
-    top: {type: String,required: true,},
-    left: {type: String,required: true,},
-  },
+  pattern: {type: String, required: true},
 });
 
 const userSchema = new mongoose.Schema({

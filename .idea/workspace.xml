@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/server/controllers/botController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/botController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Catalog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/shema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/shema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/postRequests.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/postRequests.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +28,12 @@
     &quot;assignee&quot;: &quot;awramy&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/awramy/CMD_prj.git&quot;,
-    &quot;accountId&quot;: &quot;82f69f60-6fda-4cc6-a9cf-8d28381d236d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/awramy/CMD_prj",
+    "accountId": "82f69f60-6fda-4cc6-a9cf-8d28381d236d"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -48,13 +55,13 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "new",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/avram/Desktop/L/COMAND_PRJ",
+    "last_opened_file_path": "C:/Users/avram/Desktop/L/REACT/PRJ1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\avram\\Desktop\\L\\COMAND_PRJ\\client\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\avram\\Documents\\new\\CMD_prj\\client\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -83,6 +90,7 @@
       <workItem from="1737838310795" duration="3631000" />
       <workItem from="1737924202901" duration="1746000" />
       <workItem from="1737974752971" duration="17149000" />
+      <workItem from="1739277954280" duration="9747000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
