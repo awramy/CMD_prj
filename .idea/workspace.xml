@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Catalog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/productController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/shema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/shema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/postRequests.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/postRequests.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +38,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -90,7 +82,7 @@
       <workItem from="1737838310795" duration="3631000" />
       <workItem from="1737924202901" duration="1746000" />
       <workItem from="1737974752971" duration="17149000" />
-      <workItem from="1739277954280" duration="9747000" />
+      <workItem from="1739277954280" duration="10772000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -124,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737993372616</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <option name="closed" value="true" />
+      <created>1739289361372</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739289361372</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

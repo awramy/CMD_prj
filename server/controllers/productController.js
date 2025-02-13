@@ -1,4 +1,4 @@
-import { Product } from "../models/shema.js";
+import { Product } from "../models/schema.js";
 import path from "path";
 import * as uuid from "uuid";
 import { fileURLToPath } from 'url';
@@ -23,6 +23,32 @@ class ProductController {
 
       await product.save();
       res.status(201).json({ message: "Продукт успешно создан", product });
+    } catch (e) {
+      return res.status(400).json({ error: e });
+    }
+  }
+  async getAll (req, res) {
+    try {
+      const products = Product.find({})
+      return res.status(200).json(products)
+    } catch (e) {
+      return res.status(400).json({ error: e });
+    }
+  }
+  async getOne(req, res) {
+    try{
+      const { id } = req.params;
+      const product = await Product.findById(id)
+      return res.status(200).json({product});
+    } catch (e) {
+      return res.status(400).json({ error: e });
+    }
+  }
+  async deleteOne (req, res) {
+    try {
+      const { id } = req.params;
+      const result = Product.findByIdAndDelete(id)
+      return res.status(200).json(result);
     } catch (e) {
       return res.status(400).json({ error: e });
     }

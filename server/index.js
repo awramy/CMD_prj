@@ -2,10 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import TelegramBot from 'node-telegram-bot-api';
-import { botRouter } from './routes/botRouter.js';
-import getRequests from './routes/getRequests.js'
-import postRequests from './routes/postRequests.js';
-import deleteRequests from './routes/deleteRequests.js'
+// import { botRouter } from './routes/botRouter.js';
+import mainRouter from './routes/mainRouter.js';
 import fileUpload from 'express-fileupload'//для получения файлов с клиента
 
 const app = express();
@@ -24,15 +22,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/Bot')
   .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
 
-app.use('/bot', botRouter(bot));
+// app.use('/bot', botRouter(bot));
 
 
 app.listen(port, () => {
   console.log(`Сервер запущен: http://localhost:${port}`);
 });
 
-app.use('/', getRequests);
-app.use('/', postRequests);
-app.use('/', deleteRequests);
+app.use('/', mainRouter);
 
 bot.on("polling_error", console.log);

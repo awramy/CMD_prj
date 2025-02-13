@@ -1,5 +1,4 @@
-import { User } from '../models/shema.js';
-import userService from '../models/userId.js';
+import { User } from '../models/schema.js';
 
 class BotController {
   async sendMessage(msg, bot) {
@@ -7,8 +6,6 @@ class BotController {
       const chatId = msg.chat.id;
       const userId = msg.from.id;
       const username = msg.from.username || msg.from.first_name;
-
-      userService.setUserId(userId);
 
       console.log("Получено сообщение от пользователя:", { userId, username });
 
