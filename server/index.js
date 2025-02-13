@@ -7,8 +7,8 @@ import mainRouter from './routes/mainRouter.js';
 import fileUpload from 'express-fileupload'//для получения файлов с клиента
 
 const app = express();
-const port = 3005;
-const token = "7837860088:AAF3blEH-uG9UuWFoZibiFbadVbphb5Fsq8";
+const port = process.env.PORT || 3005;
+const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 
 
