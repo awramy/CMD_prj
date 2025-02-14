@@ -13,6 +13,7 @@
     "@dicebear/lorelei": "^9.2.2",
     "axios": "^1.7.9",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "espress": "^0.0.0",
     "express": "^4.21.2",
     "express-fileupload": "^1.5.1",

@@ -1,16 +1,10 @@
-// import express from 'express';
-// import botController from "../controllers/botController.js";
-//
-// const router = express.Router()
-//
-// const botRouter = (bot) => {
-//
-//   bot.onText(/\/start/, (msg) => {
-//     console.log("Получена команда /start");
-//     botController.sendMessage(msg, bot);
-//   });
-//
-//   return router;
-// };
-//
-// export { botRouter };
+import botController from '../controllers/botController.js';
+
+const botRouter = bot => {
+  bot.on('message', (msg) => {
+    botController.sendMessage(msg, bot)
+  })
+
+}
+
+export default botRouter

@@ -1,8 +1,9 @@
+import 'dotenv/config'
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import TelegramBot from 'node-telegram-bot-api';
-// import { botRouter } from './routes/botRouter.js';
+import botRouter from './routes/botRouter.js';
 import mainRouter from './routes/mainRouter.js';
 import fileUpload from 'express-fileupload'//для получения файлов с клиента
 
@@ -10,6 +11,8 @@ const app = express();
 const port = process.env.PORT || 3005;
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
+
+console.log(token)
 
 
 app.use(express.json());
@@ -22,7 +25,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/Bot')
   .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
 
-// app.use('/bot', botRouter(bot));
+botRouter(bot)
 
 
 app.listen(port, () => {

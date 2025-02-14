@@ -1,5 +1,5 @@
 import express from "express"
-import userController from "../controllers/userController"
+import userController from "../controllers/userController.js"
 const router = express.Router()
 
 //получаем инфо о пользователе, возращаем найденного или созданного пользователя

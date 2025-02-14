@@ -16,10 +16,9 @@ const userSchema = new mongoose.Schema({
 });
 
 const basketSchema = new mongoose.Schema({
-  id: { type: String, required: true },
   user_id: { type: String, required: true },
   product_id: { type: String, required: true },
-  printImage: { type: String, required: false },
+  print_image: { type: String, required: false },
 });
 
 const Product = mongoose.model("Product", productSchema);

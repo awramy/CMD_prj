@@ -1,4 +1,4 @@
-import { User } from '../models/schema.js';
+// import { User } from '../models/schema.js';
 
 class BotController {
   async sendMessage(msg, bot) {
@@ -9,20 +9,20 @@ class BotController {
 
       console.log("Получено сообщение от пользователя:", { userId, username });
 
-      let user = await User.findOne({ id: userId });
+      // let user = await User.findOne({ id: userId });
 
-      if (!user) {
-        user = new User({
-          id: userId,
-          name: username,
-          role: "User", 
-          balance: 3000, 
-        });
-        await user.save();
-        console.log("Пользователь добавлен в базу данных:", user);
-      } else {
-        console.log("Пользователь уже существует:");
-      }
+      // if (!user) {
+      //   user = new User({
+      //     id: userId,
+      //     name: username,
+      //     role: "User",
+      //     balance: 3000,
+      //   });
+      //   await user.save();
+      //   console.log("Пользователь добавлен в базу данных:", user);
+      // } else {
+      //   console.log("Пользователь уже существует:");
+      // }
 
 
       await bot.sendMessage(
