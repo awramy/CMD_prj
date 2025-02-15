@@ -14,10 +14,12 @@ const $authHost = axios.create({
 //функция-перехватчик, добавяет в header инфо о юзере к каждому запросу
 const authInterceptor = ( config: InternalAxiosRequestConfig ) => {
 
+  const { query_id, user, hash } = window.Telegram.WebApp.initDataUnsafe
+
   config.headers.set({
-    user: localStorage.getItem('user') || "NO find",
-    query_id: localStorage.getItem('query_id'),
-    hash: localStorage.getItem('hash'),
+    user: String(user) || "NO find",
+    query_id: query_id || " ",
+    hash: hash || " ",
   })
 
   return config;
