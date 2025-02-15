@@ -18,7 +18,7 @@ const authInterceptor = ( config: InternalAxiosRequestConfig ) => {
 
   config.headers.set({
     id: user?.id || "",
-    // first_name: user?.first_name || "",
+    first_name: user?.first_name || "",
     username: user?.username || "",
     auth_date: auth_date || "",
     hash: hash || "",
