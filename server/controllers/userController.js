@@ -3,8 +3,7 @@ import { User } from '../models/schema.js';
 class UserController {
   async checkUser(req, res) {
     try {
-      const { query_id, user, hash } = req.headers
-      console.log(query_id, user, hash)
+      console.log(req.headers)
 
       return res.status(200).json({})
     } catch (error) {

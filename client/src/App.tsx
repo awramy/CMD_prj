@@ -57,18 +57,12 @@ const App: React.FC = () => {
 
   const { products, basket } = useContext(MainContext);
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-
-    const query_id = urlParams.get('query_id');
-    const user = urlParams.get('user');
-    const hash = urlParams.get('hash');
+    const { query_id, user, hash } = window.Telegram.WebApp.initDataUnsafe
 
     //сохраняем в localStorage инфо о пользователе и сессии
     if(query_id) localStorage.setItem('query_id', query_id)
     if(hash) localStorage.setItem('hash', hash)
-    if(user) localStorage.setItem('user', user)
-
-    localStorage.setItem('url', String(urlParams))
+    if(user) localStorage.setItem('user', String(user))
 
     check()
       .then(data => console.log(data))

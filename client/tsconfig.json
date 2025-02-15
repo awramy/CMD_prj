@@ -8,6 +8,6 @@
     "module": "ESNext",
     "target": "ESNext",
     "moduleResolution": "Node",
-    "types": ["vite/client"]
+    "types": ["vite/client"],
   }
 }

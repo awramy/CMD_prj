@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/client/types/global.d.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/static/1.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/static/2.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/static/3.png" afterDir="false" />
@@ -28,8 +29,12 @@
       <change afterPath="$PROJECT_DIR$/server/static/userPhotos/6.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/static/userPhotos/7.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/static/userPhotos/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/COMAND_PRJ.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/COMAND_PRJ.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -87,6 +91,7 @@
       <recent name="C:\Users\avram\Documents\new\CMD_prj\server\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\avram\Documents\new\CMD_prj\client\types" />
       <recent name="C:\Users\avram\Desktop\L\COMAND_PRJ\client\src" />
       <recent name="C:\Users\avram\Desktop\L\COMAND_PRJ\server" />
     </key>
@@ -113,7 +118,7 @@
       <workItem from="1739277954280" duration="10772000" />
       <workItem from="1739519986526" duration="5084000" />
       <workItem from="1739563978779" duration="12693000" />
-      <workItem from="1739632973632" duration="2483000" />
+      <workItem from="1739632973632" duration="6430000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -195,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739635486941</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update">
+      <option name="closed" value="true" />
+      <created>1739635885927</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739635885927</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
