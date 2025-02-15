@@ -5,9 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/server/static/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/7.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/static/9e1d4067-522e-4203-a88e-6fe613a19239.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/static/aea1d0ac-d113-47c6-b37a-f7a84fafcfd0.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/server/static/d1969260-d0f9-43aa-863a-c6957a65aba3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/internal/dark_background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/internal/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/1png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/2png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/3png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.env" beforeDir="false" afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/http/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/http/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/http/userAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/http/userAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/botController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/botController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middlewares/AuthMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middlewares/AuthMW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/userRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +82,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;new&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/avram/Desktop/L/REACT/PRJ1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/avram/Documents/new/CMD_prj/server/static&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -61,6 +93,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\avram\Documents\new\CMD_prj\server\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\avram\Desktop\L\COMAND_PRJ\client\src" />
       <recent name="C:\Users\avram\Desktop\L\COMAND_PRJ\server" />
@@ -87,6 +122,8 @@
       <workItem from="1737974752971" duration="17149000" />
       <workItem from="1739277954280" duration="10772000" />
       <workItem from="1739519986526" duration="5084000" />
+      <workItem from="1739563978779" duration="12693000" />
+      <workItem from="1739632973632" duration="1517000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />

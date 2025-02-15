@@ -6,6 +6,7 @@ import Profile from "./pages/Profile.tsx";
 import {TypeBasketList, TypeProduct} from "../types/types.ts";
 import {useContext, useEffect} from "react";
 import {MainContext} from "./contexts/mainContext.tsx";
+import { check } from "./http/userAPI.ts";
 
 
 const productsArray: TypeProduct[] = [
@@ -57,6 +58,22 @@ const App: React.FC = () => {
   const { products, basket } = useContext(MainContext);
 
   useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const query_id = urlParams.get('query_id');
+    const user = urlParams.get('user');
+    const hash = urlParams.get('hash');
+
+    //сохраняем в localStorage инфо о пользователе и сессии
+    if(query_id) localStorage.setItem('query_id', query_id)
+    if(hash) localStorage.setItem('hash', hash)
+    if(user) localStorage.setItem('user', user)
+
+    check()
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
+
+    //заполняем контекст данными
     products.setProducts(productsArray)
     basket.setBasket((basketList))
   }, [])

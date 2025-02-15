@@ -1,6 +1,16 @@
 import { User } from '../models/schema.js';
 
 class UserController {
+  async checkUser(req, res) {
+    try {
+      const { query_id, user, hash } = req.headers
+      console.log(query_id, user, hash)
+
+      return res.status(200).json({})
+    } catch (error) {
+      return res.status(400).json({})
+    }
+  }
   async getOrCreateUser(req, res) {
     try {
       //получаем данные о пользователе с клиента
