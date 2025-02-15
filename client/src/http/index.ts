@@ -17,7 +17,7 @@ const authInterceptor = ( config: InternalAxiosRequestConfig ) => {
   const { query_id, user, hash } = window.Telegram.WebApp.initDataUnsafe
 
   config.headers.set({
-    user: JSON.stringify(user) || " ",
+    user: String(user) || " ",
     query_id: query_id || " ",
     hash: hash || " ",
   })
