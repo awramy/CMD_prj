@@ -3,7 +3,6 @@ import css from "./TopMenu.module.scss"
 const TopMenu = () => {
   return (
     <div className={css.top_menu}>
-
       <div className={css.select_photo_cont}>
         <svg className={css.select_photo_svg} width="30px" height="30px" viewBox="0 0 1920 1920"
              xmlns="http://www.w3.org/2000/svg">
