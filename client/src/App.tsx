@@ -57,12 +57,6 @@ const App: React.FC = () => {
 
   const { products, basket } = useContext(MainContext);
   useEffect(() => {
-    const { query_id, user, hash } = window.Telegram.WebApp.initDataUnsafe
-
-    //сохраняем в localStorage инфо о пользователе и сессии
-    if(query_id) localStorage.setItem('query_id', query_id)
-    if(hash) localStorage.setItem('hash', hash)
-    if(user) localStorage.setItem('user', String(user))
 
     check()
       .then(data => console.log(data))
