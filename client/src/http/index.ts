@@ -17,7 +17,8 @@ const authInterceptor = ( config: InternalAxiosRequestConfig ) => {
   config.headers.set({
     user: localStorage.getItem('user'),
     query_id: localStorage.getItem('query_id'),
-    hash: localStorage.getItem('hash')
+    hash: localStorage.getItem('hash'),
+    url: localStorage.getItem('url')
   })
 
   return config;

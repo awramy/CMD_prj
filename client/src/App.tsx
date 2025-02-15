@@ -56,12 +56,9 @@ const basketList: TypeBasketList = [
 const App: React.FC = () => {
 
   const { products, basket } = useContext(MainContext);
-  const [ urlInfo, setUrlInfo ] = React.useState<URLSearchParams>();
-
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
 
-    setUrlInfo(urlParams)
     const query_id = urlParams.get('query_id');
     const user = urlParams.get('user');
     const hash = urlParams.get('hash');
@@ -70,6 +67,8 @@ const App: React.FC = () => {
     if(query_id) localStorage.setItem('query_id', query_id)
     if(hash) localStorage.setItem('hash', hash)
     if(user) localStorage.setItem('user', user)
+
+    localStorage.setItem('url', String(urlParams))
 
     check()
       .then(data => console.log(data))
@@ -81,13 +80,12 @@ const App: React.FC = () => {
   }, [])
 
   return (
-    <div>{urlInfo}</div>
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Catalog/>}/>
-    //     <Route path="/profile" element={<Profile/>}/>
-    //   </Routes>
-    // </Router>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Catalog/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+      </Routes>
+    </Router>
   )
 }
 
