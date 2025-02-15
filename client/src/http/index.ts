@@ -15,7 +15,7 @@ const $authHost = axios.create({
 const authInterceptor = ( config: InternalAxiosRequestConfig ) => {
 
   config.headers.set({
-    user: localStorage.getItem('user'),
+    user: localStorage.getItem('user') || "NO find",
     query_id: localStorage.getItem('query_id'),
     hash: localStorage.getItem('hash'),
   })
