@@ -13,7 +13,7 @@ export const check = async () => {
 export const fetchSelectPhoto = async (file: File | Blob) => {
   const formData = new FormData();
   formData.append('photo', file); // 'photo' — это ключ, который сервер ожидает для файла
-  const { data } = await $authHost.post('/user/selectPhoto', formData, {
+  const { data } = await $authHost.post('/user/savePhoto', formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
     }

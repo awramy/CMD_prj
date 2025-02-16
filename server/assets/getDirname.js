@@ -1,6 +1,5 @@
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
-// Получаем имя директории
-const getDirname = (metaUrl) => dirname(fileURLToPath(import.meta.url));
+const getDirname = (metaUrl) => dirname(fileURLToPath(metaUrl));
 export default getDirname
