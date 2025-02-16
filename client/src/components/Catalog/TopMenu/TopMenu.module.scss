@@ -4,6 +4,7 @@
   height: var(--catalog-menu-height);
   margin-top: var(--header-height);
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 
@@ -35,8 +36,6 @@
       padding-right: 5px;
       height: 100%;
       width: 15px;
-      //background-color: var(--main-color);
-      //position: relative;
       overflow: hidden;
 
       .effect {
@@ -212,84 +211,45 @@
   }
 
   .open_gallery_cont {
-    width: 170px;
-    height: 160px;
     position: relative; /* Для позиционирования псевдоэлементов */
-    padding: 20px; /* Отступы внутри блока */
     display: flex;
     align-items: center;
+    width: 100%;
+    overflow: hidden;
 
     .open_gallery_block {
-      margin: 10px auto;
+      padding: 5px 0 3px 0;
       width: 100%;
-      height: 100%;
       background-color: var(--hover-color);
-      overflow: hidden;
       cursor: pointer;
       transition: 0.5s ease;
 
       .open_gallery_text {
         width: 80%;
-        font-size: 1.4em;
+        font-size: 1.2em;
         font-weight: 600;
         text-align: end;
         float: right;
         padding-right: 10px;
         color: var(--background-color);
       }
+      .open_gallery_butt {
+        float: right;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: var(--secondary-color);
+      }
       svg {
         fill: var(--background-color);
         position: absolute;
-        right: 16%;
-        bottom: -15%;
+        left: -9%;
+        top: -40%;
         transform: rotate(-10deg);
       }
     }
-    &::before,
-    &::after {
-      content: ''; /* Создаём пустой элемент */
-      position: absolute;
-      width: 20%; /* Ширина линии */
-      height: 20%; /* Высота линии */
-      border: 10px solid var(--main-color); /* Толщина и цвет рамки */
-      pointer-events: none; /* Чтобы рамка не мешала взаимодействию с контентом */
-      transition: 0.3s ease;
-    }
-
-    &::before {
-      border-right: none; /* Убираем правую сторону */
-      border-bottom: none; /* Убираем нижнюю сторону */
-      top: 0;
-      left: 0;
-    }
-
-    &::after {
-      border-left: none; /* Убираем левую сторону */
-      border-top: none; /* Убираем верхнюю сторону */
-      bottom: 0;
-      right: 0;
-    }
-
     &:hover .open_gallery_block{
       background-color: var(--focus-color);
-    }
-    &:hover::before,&:hover::after {
-      width: 30%; /* Ширина линии */
-      height: 30%; /* Высота линии */
-      border: 5px solid var(--secondary-color);
-    }
-
-    &:hover::before {
-      border-right: none; /* Убираем правую сторону */
-      border-bottom: none; /* Убираем нижнюю сторону */
-      top: 10px;
-      left: 10px;
-    }
-    &:hover::after {
-      border-left: none; /* Убираем правую сторону */
-      border-top: none; /* Убираем нижнюю сторону */
-      bottom: 10px;
-      right: 10px;
     }
   }
 }

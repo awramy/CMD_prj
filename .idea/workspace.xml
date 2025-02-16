@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/styles/_media.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Container/Container.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Container/Container.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ListItem/ListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ListItem/ListItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ListItem/listitem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ListItem/listitem.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Catalog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +40,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -106,7 +94,7 @@
       <workItem from="1739277954280" duration="10772000" />
       <workItem from="1739519986526" duration="5084000" />
       <workItem from="1739563978779" duration="12693000" />
-      <workItem from="1739632973632" duration="37581000" />
+      <workItem from="1739632973632" duration="42060000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -380,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739699523563</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="update">
+      <option name="closed" value="true" />
+      <created>1739713986968</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1739713986968</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
