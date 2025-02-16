@@ -1,13 +1,8 @@
 import { Product } from "../models/schema.js";
 import path from "path";
 import * as uuid from "uuid";
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import getDirname from "../assets/getDirname.js";
 
-// Получаем текущий путь файла
-const __filename = fileURLToPath(import.meta.url);
-// Получаем имя директории
-const __dirname = dirname(__filename);
 
 class ProductController {
   async createProduct(req, res) {
@@ -16,7 +11,8 @@ class ProductController {
       const { image } = req.files
       const fileName = uuid.v4() + '.jpg'
 
-      image.mv(path.resolve(__dirname, '..', 'static', fileName)) //dirname - путь к текущему файлу
+      image.mv(path.resolve(getDirname(import.meta.url), '..', 'static/selectPhotos', fileName)) //dirname - путь к текущему файлу
+
       const product = new Product({
         name, price, image: fileName, description, pattern
       });

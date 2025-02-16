@@ -1,10 +1,12 @@
 import { User } from '../models/schema.js';
+import path from "path";
+import getDirname from "../assets/getDirname.js";
+import * as uuid from "uuid";
 
 class UserController {
   async checkUser(req, res) {
     try {
-      // console.log(req.headers)
-
+      console.log(req.headers)
       return res.status(200).json({})
     } catch (error) {
       return res.status(400).json({})
@@ -34,6 +36,25 @@ class UserController {
       return res.status(200).json({user})
     } catch (error) {
       return res.status(500).send({ message: "Ошибка сервера", error });
+    }
+  }
+  async savePhoto(req, res) {
+    try {
+      const { image } = req.files
+      const user = req.user
+      const fileName = uuid.v4() + '.jpg'
+
+      image.mv(path.resolve(getDirname(import.meta.url), '..', 'static', fileName))
+
+      const selectPhoto = new SelectPhoto({
+        user_id: user,
+        image: image
+      })
+
+      await selectPhoto.save();
+      return res.status(200).json({fileName})
+    } catch (error) {
+      return res.status(400).send({ error: error });
     }
   }
 }

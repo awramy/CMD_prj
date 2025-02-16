@@ -1,6 +1,33 @@
 import css from "./TopMenu.module.scss"
+import {ChangeEvent, useContext, useEffect, useRef, useState} from "react";
+import {fetchSelectPhoto} from "../../../http/userAPI.ts";
+import {MainContext} from "../../../contexts/mainContext.tsx";
+import {observer} from "mobx-react-lite";
 
-const TopMenu = () => {
+const TopMenu = observer(() => {
+
+  const { user } = useContext(MainContext)
+  const [file, setFile] = useState<File | null>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  const selectFile = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setFile(e.target.files[0]);
+    }
+  }
+  const clearFile = () => {
+    setFile(null)
+    if(fileInputRef.current) {
+      fileInputRef.current.value = ''
+    }
+  }
+
+  useEffect(() => {
+    if(file instanceof File){
+      fetchSelectPhoto(file)
+        .then(data => user.setActivePhoto(data))
+    }}, [file])
+
   return (
     <div className={css.top_menu}>
       <div className={css.select_photo_cont}>
@@ -23,8 +50,19 @@ const TopMenu = () => {
           id="fileInput"
           type="file"
           className={css.file_input}
+          onChange={selectFile}
+          ref={fileInputRef}
         />
-
+        {
+          file &&
+          <button
+            className={css.selected_photo_info}
+            onClick={clearFile}
+          >
+            <p>...png</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024"><path fillRule="evenodd" d="M880 112c17.7 0 32 14.3 32 32v736c0 17.7-14.3 32-32 32H144c-17.7 0-32-14.3-32-32V144c0-17.7 14.3-32 32-32Zm-40 72H184v656h656zM640.013 338.826c.023.007.042.018.083.059l45.02 45.019c.04.04.05.06.058.083a.118.118 0 0 1 0 .07c-.007.022-.018.041-.059.082L557.254 512l127.861 127.862a.268.268 0 0 1 .05.06l.009.023a.118.118 0 0 1 0 .07c-.007.022-.018.041-.059.082l-45.019 45.02c-.04.04-.06.05-.083.058a.118.118 0 0 1-.07 0c-.022-.007-.041-.018-.082-.059L512 557.254L384.14 685.115c-.042.041-.06.052-.084.059a.118.118 0 0 1-.07 0c-.022-.007-.041-.018-.082-.059l-45.02-45.019a.199.199 0 0 1-.058-.083a.118.118 0 0 1 0-.07c.007-.022.018-.041.059-.082L466.745 512l-127.86-127.86a.268.268 0 0 1-.05-.061l-.009-.023a.118.118 0 0 1 0-.07c.007-.022.018-.041.059-.082l45.019-45.02c.04-.04.06-.05.083-.058a.118.118 0 0 1 .07 0c.022.007.041.018.082.059L512 466.745l127.862-127.86c.04-.041.06-.052.083-.059a.118.118 0 0 1 .07 0Z"/></svg>
+          </button>
+        }
         <div className={css.gradient}>
           <div className={css.effect}/>
         </div>
@@ -66,15 +104,20 @@ const TopMenu = () => {
             Каталог трендов - топ дизайны
           </div>
           <button className={css.open_gallery_butt}>Выбрать</button>
-
-          <svg width="140px" height="140px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.2" d="M10.7509 2.45007C11.4409 1.86007 12.5708 1.86007 13.2708 2.45007L14.8509 3.81005C15.1509 4.07005 15.7108 4.28009 16.1108 4.28009H17.8109C18.8709 4.28009 19.7408 5.15008 19.7408 6.21008V7.91003C19.7408 8.30003 19.9508 8.87004 20.2108 9.17004L21.5709 10.7501C22.1609 11.4401 22.1609 12.5701 21.5709 13.2701L20.2108 14.85C19.9508 15.15 19.7408 15.71 19.7408 16.11V17.8101C19.7408 18.8701 18.8709 19.74 17.8109 19.74H16.1108C15.7208 19.74 15.1509 19.9501 14.8509 20.2101L13.2708 21.5701C12.5808 22.1601 11.4509 22.1601 10.7509 21.5701L9.17087 20.2101C8.87087 19.9501 8.31086 19.74 7.91086 19.74H6.18085C5.12085 19.74 4.25086 18.8701 4.25086 17.8101V16.1C4.25086 15.71 4.04087 15.15 3.79087 14.85L2.44086 13.2601C1.86086 12.5701 1.86086 11.4501 2.44086 10.7601L3.79087 9.17004C4.04087 8.87004 4.25086 8.31004 4.25086 7.92004V6.21008C4.25086 5.15008 5.12085 4.28009 6.18085 4.28009H7.91086C8.30086 4.28009 8.87087 4.07005 9.17087 3.81005L10.7509 2.45007Z"/>
-            <path opacity="0.4" d="M16.5804 11.07C16.3904 10.8 16.0705 10.65 15.6905 10.65H13.7404C13.6104 10.65 13.4905 10.6 13.4105 10.5C13.3305 10.4 13.2905 10.27 13.3105 10.13L13.5504 8.56998C13.6504 8.10998 13.3405 7.57997 12.8805 7.42997C12.4505 7.26997 11.9404 7.48995 11.7404 7.78995L9.80045 10.67V10.31C9.80045 9.60997 9.50047 9.31998 8.76047 9.31998H8.27045C7.53045 9.31998 7.23047 9.60997 7.23047 10.31V15.09C7.23047 15.79 7.53045 16.08 8.27045 16.08H8.76047C9.46047 16.08 9.76047 15.81 9.79047 15.17L11.2605 16.3C11.4605 16.5 11.9105 16.61 12.2305 16.61H14.0804C14.7204 16.61 15.3605 16.13 15.5005 15.54L16.6705 11.98C16.8005 11.66 16.7704 11.33 16.5804 11.07Z"/>
-          </svg>
         </div>
       </div>
+
+      <div className={css.filter_cont}>
+        <input type="radio" id="radio-1" name="tabs" />
+        <label className={css.filter_tab} htmlFor="radio-1">Мужское<span className={css.notification}>2</span></label>
+        <input type="radio" id="radio-2" name="tabs"/>
+        <label className={css.filter_tab} htmlFor="radio-2">Женское</label>
+        <input type="radio" id="radio-3" name="tabs"/>
+        <label className={css.filter_tab} htmlFor="radio-3">Унисекс</label>
+        <span className={css.glider}></span>
+      </div>
     </div>
-  );
-};
+  )
+})
 
 export default TopMenu;

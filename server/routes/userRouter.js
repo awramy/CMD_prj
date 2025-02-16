@@ -5,6 +5,7 @@ const router = express.Router()
 
 //получаем инфо о пользователе, возращаем найденного или созданного пользователя
 router.get('/user', authMW, userController.getOrCreateUser)
+router.post('/user/savePhoto', authMW, userController.savePhoto)
 router.get('/check', authMW, userController.checkUser)
 
 

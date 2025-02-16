@@ -9,11 +9,7 @@ import fileUpload from 'express-fileupload'
 import path from "path";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-
-// Получаем текущий путь файла
-const __filename = fileURLToPath(import.meta.url);
-// Получаем имя директории
-const __dirname = dirname(__filename);
+import getDirname from "./assets/getDirname.js";
 
 const app = express();
 const port = process.env.PORT || 3005;
@@ -23,7 +19,8 @@ const bot = new TelegramBot(token, { polling: true });
 app.use(express.json());
 app.use(cors());
 app.use(fileUpload({}))
-app.use(express.static(path.resolve(__dirname, 'static')))
+app.use(express.static(path.resolve(getDirname(import.meta.url), 'static')))
+
 
 mongoose.connect('mongodb://127.0.0.1:27017/Bot')
   .then(() => console.log('Connected to MongoDB'))

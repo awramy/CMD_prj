@@ -15,7 +15,7 @@ const ListItem: React.FC<ListItemProps> = observer(({id, name, price, pattern}) 
   return (
     <div className={css.list_item}>
       <img className={css.main_image} src={import.meta.env.VITE_REACT_APP_API_URL + '/' + id + '.png'} alt="user"/>
-      <img className={css.print_image} style={pattern} src={import.meta.env.VITE_REACT_APP_API_URL + '/userPhotos/' + user?.activePhoto.path} />
+      <img className={css.print_image} style={pattern} src={import.meta.env.VITE_REACT_APP_API_URL + '/selectPhotos/' + user?.activePhoto.path} />
       <div className={css.bottom_info}>
         <button >{price}</button>
         <div className={css.info_title}>{name}</div>

@@ -20,9 +20,14 @@ const basketSchema = new mongoose.Schema({
   product_id: { type: String, required: true },
   print_image: { type: String, required: false },
 });
+const userSelectPhotoSchema = new mongoose.Schema({
+  user_id: { type: String, required: true },
+  image: { type: String, required: false },
+});
 
 const Product = mongoose.model("Product", productSchema);
 const User = mongoose.model("User", userSchema);
 const Basket = mongoose.model("Basket", basketSchema);
+const SelectPhoto = mongoose.model("SelectPhoto", userSelectPhotoSchema);
 
-export { Product, User, Basket };
+export { Product, User, Basket, SelectPhoto };
