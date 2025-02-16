@@ -7,6 +7,7 @@ import {TypeBasketList, TypeProduct} from "../types/types.ts";
 import {useContext, useEffect} from "react";
 import {MainContext} from "./contexts/mainContext.tsx";
 import { check } from "./http/userAPI.ts";
+import Loader from "./components/Loader/Loader.tsx";
 
 
 const productsArray: TypeProduct[] = [
@@ -55,18 +56,23 @@ const basketList: TypeBasketList = [
 
 const App: React.FC = () => {
 
+  const [loading, setLoading] = React.useState<boolean>(true);
   const { products, basket } = useContext(MainContext);
   useEffect(() => {
 
     check()
       .then(data => console.log(data))
       .catch(err => console.log(err))
+      .finally(() => setLoading(false))
 
     //заполняем контекст данными
     products.setProducts(productsArray)
     basket.setBasket((basketList))
   }, [])
 
+  if (loading) {
+    return <Loader/>
+  }
   return (
     <Router>
       <Routes>

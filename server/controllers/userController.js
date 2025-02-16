@@ -3,7 +3,7 @@ import { User } from '../models/schema.js';
 class UserController {
   async checkUser(req, res) {
     try {
-      console.log(req.headers)
+      // console.log(req.headers)
 
       return res.status(200).json({})
     } catch (error) {

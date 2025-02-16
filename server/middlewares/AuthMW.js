@@ -2,19 +2,34 @@ import * as crypto from "node:crypto";
 
 const botToken = process.env.TELEGRAM_BOT_TOKEN;
 
+//мидлвейр для проверки сессии пользователя на валидность (обработка hash юзера)
 export default function (req, res, next) {
   try {
-    const {hash, id, first_name, username, auth_date } = req.headers;
-    const data = { id, first_name, username, auth_date }
+    //получаем из заголовков запроса строку query_string (сформирована на клиенте)
+    const params = new URLSearchParams(req.headers.query_string)
+    //получаем строку хэш(токен), которую мы и будем проверять
+    const hash = params.get('hash');
+    //удаляем строку хэш из объекта с остальными данными
+    params.delete('hash')
 
-    const sortedData = Object.keys(data)
+    //сортируем данные так, как нужно телеграмму чтоб норм токен для сравнения сформировать
+    const sortedData = Array.from(params.entries())
+      .map(([key, value]) => `${key}=${value}`)
       .sort()
-      .map((key) => `${key}=${data[key]}`)
       .join('\n');
 
-    const secretKey = crypto.createHash('sha256').update(botToken).digest()
+    //формируем секретный ключ, основываясь на токене бота
+    const secretKey = crypto.createHmac('sha256', 'WebAppData').update(botToken).digest()
+    //формируем хэш на основе секретного ключа и данных о юзере
     const hmac = crypto.createHmac('sha256', secretKey).update(sortedData).digest('hex')
-    return console.log(hmac === hash)
+
+    //сравниваем наш сформированный хэш с хэшем, полученным от клиента
+    if(hmac === hash) {
+      next()
+    } else {
+      return res.status(401).json({message: 'unauthorized'})
+    }
+
   } catch (error) {
     return res.status(401).json({message: error.message})
   }
