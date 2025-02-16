@@ -25,7 +25,9 @@ const TopMenu = observer(() => {
   useEffect(() => {
     if(file instanceof File){
       fetchSelectPhoto(file)
-        .then(data => user.setActivePhoto(data))
+        .then(data => {
+          user.setActivePhoto(data.data)
+        })
     }}, [file])
 
   return (
