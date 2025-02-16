@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Loader/Loader.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Loader/Loader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middlewares/AuthMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middlewares/AuthMW.js" afterDir="false" />
-    </list>
+    <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +36,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -95,7 +87,7 @@
       <workItem from="1739277954280" duration="10772000" />
       <workItem from="1739519986526" duration="5084000" />
       <workItem from="1739563978779" duration="12693000" />
-      <workItem from="1739632973632" duration="26013000" />
+      <workItem from="1739632973632" duration="26323000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -345,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739689999628</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="update">
+      <option name="closed" value="true" />
+      <created>1739698959264</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1739698959264</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -59,12 +59,12 @@ const App: React.FC = () => {
   const [loading, setLoading] = React.useState<boolean>(true);
   const { products, basket } = useContext(MainContext);
   useEffect(() => {
-
+    setTimeout( () =>
     check()
       .then(data => console.log(data))
       .catch(err => console.log(err))
       .finally(() => setLoading(false))
-
+    , 2000)
     //заполняем контекст данными
     products.setProducts(productsArray)
     basket.setBasket((basketList))
