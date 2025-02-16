@@ -64,7 +64,7 @@ const App: React.FC = () => {
       .then(data => console.log(data))
       .catch(err => console.log(err))
       .finally(() => setLoading(false))
-    , 2000)
+    , 1000)
     //заполняем контекст данными
     products.setProducts(productsArray)
     basket.setBasket((basketList))
