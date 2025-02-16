@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/server/assets/getDirname.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ListItem/ListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ListItem/ListItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/http/userAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/http/userAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/productController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middlewares/AuthMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middlewares/AuthMW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/schema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/userRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/userPhotos/2png.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +94,7 @@
       <workItem from="1739277954280" duration="10772000" />
       <workItem from="1739519986526" duration="5084000" />
       <workItem from="1739563978779" duration="12693000" />
-      <workItem from="1739632973632" duration="57057000" />
+      <workItem from="1739632973632" duration="58760000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -396,7 +384,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739719185620</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="update">
+      <option name="closed" value="true" />
+      <created>1739738831983</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1739738831983</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update">
+      <option name="closed" value="true" />
+      <created>1739739181534</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1739739181534</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

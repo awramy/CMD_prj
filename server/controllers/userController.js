@@ -1,4 +1,4 @@
-import { User } from '../models/schema.js';
+import {SelectPhoto, User} from '../models/schema.js';
 import path from "path";
 import getDirname from "../assets/getDirname.js";
 import * as uuid from "uuid";
@@ -40,21 +40,23 @@ class UserController {
   }
   async savePhoto(req, res) {
     try {
-      const { image } = req.files
-      const user = req.user
+      const { photo } = req.files
+      const user = req.user || '12345'
       const fileName = uuid.v4() + '.jpg'
 
-      image.mv(path.resolve(getDirname(import.meta.url), '..', 'static', fileName))
+      console.log(fileName)
+
+      photo.mv(path.resolve(getDirname(import.meta.url), '..', 'static/selectPhotos', fileName))
 
       const selectPhoto = new SelectPhoto({
         user_id: user,
-        image: image
+        image: fileName
       })
 
       await selectPhoto.save();
-      return res.status(200).json({fileName})
+      return res.status(200).json({data: fileName})
     } catch (error) {
-      return res.status(400).send({ error: error });
+      return res.status(403).send({ error: error });
     }
   }
 }

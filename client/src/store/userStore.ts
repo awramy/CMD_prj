@@ -24,8 +24,8 @@ export default class userStore {
   setPhotos(photos: TypeUserPhotos) {
     this._photos = photos
   }
-  setActivePhoto(activePhoto: TypeActivePhoto) {
-    this._activePhoto = activePhoto
+  setActivePhoto(activePhoto: string) {
+    this._activePhoto.path = activePhoto
   }
 
   get userInfo() {
