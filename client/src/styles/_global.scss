@@ -1,18 +1,4 @@
-@use 'variables' as *;
-
 :root {
-  --main-color: #{$main-color};
-  --text-color: #{$text-color};
-  --secondary-color: #{$secondary-color};
-  --hover-color: #{$hover-color};
-  --focus-color: #{$focus-color};
-  --background-color: #{$background-color};
-  --block-color: #{$block-color};
-  --header-height: #{$header-height};
-  --catalog-menu-height: #{$catalog_top-menu-height};
-  --header-background-color: #{$header-background-color};
-  --accent-color: #{$accent-color};
-
   font-family: Roboto, serif;
   line-height: 1.5;
   font-weight: 400;

@@ -1,0 +1,6 @@
+@use '../../../styles/mixins';
+
+.product_list {
+  margin-left: auto;
+  @include mixins.grid($columns: var(--catalog-grid-columns));
+}

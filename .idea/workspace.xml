@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/styles/_media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Container/Container.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Container/Container.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ListItem/ListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ListItem/ListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ListItem/listitem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ListItem/listitem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Catalog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +77,8 @@
       <recent name="C:\Users\avram\Documents\new\CMD_prj\server\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\avram\Documents\new\CMD_prj\client\src\components\Catalog\ProductList" />
+      <recent name="C:\Users\avram\Documents\new\CMD_prj\client\src\components\Catalog" />
       <recent name="C:\Users\avram\Documents\new\CMD_prj\client\types" />
       <recent name="C:\Users\avram\Desktop\L\COMAND_PRJ\client\src" />
       <recent name="C:\Users\avram\Desktop\L\COMAND_PRJ\server" />
@@ -89,7 +106,7 @@
       <workItem from="1739277954280" duration="10772000" />
       <workItem from="1739519986526" duration="5084000" />
       <workItem from="1739563978779" duration="12693000" />
-      <workItem from="1739632973632" duration="26706000" />
+      <workItem from="1739632973632" duration="37581000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -355,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739699216876</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="update">
+      <option name="closed" value="true" />
+      <created>1739699523563</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1739699523563</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

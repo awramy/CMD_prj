@@ -1,9 +1,9 @@
 import css from './listitem.module.scss'
 import * as React from "react";
 import {useContext} from "react";
-import {MainContext} from "../../contexts/mainContext.tsx";
+import {MainContext} from "../../../../contexts/mainContext.tsx";
 import {observer} from "mobx-react-lite";
-import {ListItemProps} from "../../../types/interfaces.ts";
+import {ListItemProps} from "../../../../../types/interfaces.ts";
 
 
 const ListItem: React.FC<ListItemProps> = observer(({id, name, price, pattern}) => {

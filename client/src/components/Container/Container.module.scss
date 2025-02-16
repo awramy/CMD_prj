@@ -1,24 +1,4 @@
-@use '../../styles/mixins';
-
 .container {
   min-width: 400px;
   margin: 0 auto;
-
-  // Стили для мобильных устройств
-  @media (max-width: 459px) {
-    @include mixins.flex_column();
-    max-width: 100%; // Полная ширина на мобильных устройствах
-  }
-
-  // Стили для планшетов
-  @media (min-width: 460px) and (max-width: 900px) {
-    @include mixins.flex_row($justify: center, $gap: 20);
-    max-width: 100%; // Ширина 90% на планшетах
-  }
-
-  // Стили для десктопов
-  @media (min-width: 901px) {
-    @include mixins.flex_row($justify: center, $gap: 8);
-    max-width: 1200px; // Ширина 1200px на десктопах
-  }
 }

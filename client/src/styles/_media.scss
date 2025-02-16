@@ -1,0 +1,24 @@
+
+// Стили для мобильных устройств
+@media (max-width: 459px) {
+  :root {
+    --container-max-width: 100%;
+    --catalog-grid-columns: 2;
+  }
+}
+
+// Стили для планшетов
+@media (min-width: 459px) and (max-width: 900px) {
+  :root {
+    --container-max-width: 90%;
+    --catalog-grid-columns: 3;
+  }
+}
+
+// Стили для десктопов
+@media (min-width: 901px) {
+  :root {
+    --container-max-width: 1000px;
+    --catalog-grid-columns: 4;
+  }
+}
