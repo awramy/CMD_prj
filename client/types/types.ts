@@ -1,8 +1,8 @@
 //тип продукта (используем в сторе и компонентах)
 export type TypeProduct = {
-  id: number;
+  id: string;
   name: string;
-  price: string;
+  price: number;
   image: string;
   description: string;
   pattern: {
@@ -12,7 +12,15 @@ export type TypeProduct = {
     opacity?: string,
     transform?: string,
   };
+  info: {
+    id: string;
+    title: string;
+    description: string;
+    image: string;
+  }[]
 }
+
+export type TypeShowModal = [showModal: Boolean, setShowModal: (newState: boolean) => void]
 
 //тип элемента корзины
 export type TypeBasketItem = {

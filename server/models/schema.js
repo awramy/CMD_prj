@@ -1,11 +1,24 @@
 import mongoose from "mongoose";
 
+const productInfoSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    enum: ['Материал', 'Плотность ткани', 'Сезон', 'Пол', 'Объем', 'Вес'],
+    required: true },
+  description: { type: String,required: true },
+  image: {
+    type: String,
+    enum: ['cloth.png', 'density.png', 'season.png', 'gender.png', 'volume.png', 'weight.png'],
+  }
+})
+
 const productSchema = new mongoose.Schema({
   name:  {type: String,required: true,},
   price: {type: Number,required: true,},
   image: {type: String,required: true,},
   description: { type: String, required: true,},
-  pattern: {type: String, required: true},
+  pattern: {type: Object, required: true},
+  info: [productInfoSchema]
 });
 
 const userSchema = new mongoose.Schema({

@@ -12,11 +12,15 @@ export default function (req, res, next) {
     //удаляем строку хэш из объекта с остальными данными
     params.delete('hash')
 
+    console.log(req.headers.query_string)
+
     //сортируем данные так, как нужно телеграмму чтоб норм токен для сравнения сформировать
     const sortedData = Array.from(params.entries())
       .map(([key, value]) => `${key}=${value}`)
       .sort()
       .join('\n');
+
+    console.log(sortedData)
 
     //формируем секретный ключ, основываясь на токене бота
     const secretKey = crypto.createHmac('sha256', 'WebAppData').update(botToken).digest()

@@ -7,14 +7,14 @@ import getDirname from "../assets/getDirname.js";
 class ProductController {
   async createProduct(req, res) {
     try {
-      const { name, price, description, pattern } = req.body
+      const { name, price, description, pattern, info } = req.body
       const { image } = req.files
       const fileName = uuid.v4() + '.jpg'
 
-      image.mv(path.resolve(getDirname(import.meta.url), '..', 'static/selectPhotos', fileName)) //dirname - путь к текущему файлу
+      image.mv(path.resolve(getDirname(import.meta.url), '..', 'static/productPhotos', fileName)) //dirname - путь к текущему файлу
 
       const product = new Product({
-        name, price, image: fileName, description, pattern
+        name, price: Number(price), image: fileName, description, pattern: JSON.parse(pattern), info: JSON.parse(info),
       });
 
       await product.save();
@@ -25,10 +25,11 @@ class ProductController {
   }
   async getAll (req, res) {
     try {
-      const products = Product.find({})
+      console.log('ssss')
+      const products = await Product.find({})
       return res.status(200).json(products)
     } catch (e) {
-      return res.status(400).json({ error: e });
+      return res.status(400).json({ error: e.message });
     }
   }
   async getOne(req, res) {
