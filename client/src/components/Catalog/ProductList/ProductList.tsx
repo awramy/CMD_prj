@@ -25,7 +25,6 @@ const ProductList = observer(() => {
     }
     setActiveProduct(product)
     products.setActiveProduct(product)
-    console.log(products.products[1])
   }
 
   return (
