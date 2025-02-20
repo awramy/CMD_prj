@@ -7,8 +7,6 @@ import botRouter from './routes/botRouter.js';
 import mainRouter from './routes/mainRouter.js';
 import fileUpload from 'express-fileupload'
 import path from "path";
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 import getDirname from "./assets/getDirname.js";
 
 const app = express();

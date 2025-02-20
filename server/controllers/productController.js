@@ -25,7 +25,6 @@ class ProductController {
   }
   async getAll (req, res) {
     try {
-      console.log('ssss')
       const products = await Product.find({})
       return res.status(200).json(products)
     } catch (e) {
