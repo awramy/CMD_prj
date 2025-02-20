@@ -26,8 +26,8 @@ export type TypeShowModal = {showModal: boolean, setShowModal: React.Dispatch<Re
 
 //тип элемента корзины
 export type TypeBasketItem = {
-  id: number;
-  product_id: number;
+  id: string;
+  product_id: string;
   printImage: string;
 }
 
@@ -48,3 +48,31 @@ export type TypeActivePhoto = {
   id?: number;
   path?: string;
 };
+
+declare global {
+  interface Window {
+    Telegram: {
+      WebApp: {
+        initData: string;
+        initDataUnsafe: {
+          query_id?: string;
+          user?: {
+            id: number;
+            first_name: string;
+            last_name?: string;
+            username?: string;
+            language_code?: string;
+          };
+          auth_date?: number;
+          hash?: string;
+        };
+        close: () => void;
+        expand: () => void;
+        isExpanded: boolean;
+        onEvent: (eventType: string, callback: () => void) => void;
+        offEvent: (eventType: string, callback: () => void) => void;
+        sendData: (data: string) => void;
+      };
+    };
+  }
+}

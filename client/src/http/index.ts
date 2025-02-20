@@ -11,6 +11,8 @@ const $authHost = axios.create({
   baseURL: import.meta.env.VITE_REACT_APP_API_URL
 })
 
+
+
 //функция-перехватчик, добавляет в header инфо о юзере к каждому запросу
 const authInterceptor = ( config: InternalAxiosRequestConfig ) => {
 

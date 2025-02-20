@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/client/src/contexts/modalContext.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Container/Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Container/Container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/contexts/mainContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/contexts/mainContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/productsStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/productsStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ProductInfo/ProductInfo.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ProductInfo/ProductInfo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ProductInfo/ProductParams/ProductParams.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ProductInfo/ProductParams/ProductParams.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Slide/Slide.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Slide/Slide.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Slider/Slider.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Slider/Slider.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +48,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -103,7 +105,7 @@
       <workItem from="1739632973632" duration="87690000" />
       <workItem from="1739903896090" duration="36932000" />
       <workItem from="1740039537616" duration="9427000" />
-      <workItem from="1740058430890" duration="3279000" />
+      <workItem from="1740058430890" duration="5177000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -433,7 +435,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739985048450</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="update">
+      <option name="closed" value="true" />
+      <created>1740065698829</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1740065698829</updated>
+    </task>
+    <task id="LOCAL-00043" summary="update">
+      <option name="closed" value="true" />
+      <created>1740066017539</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1740066017539</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -13,8 +13,8 @@ import {fetchProducts} from "./http/productAPI.ts";
 
 
 const basketList: TypeBasketList = [
-  {id: 1, product_id: 1, printImage: '1png.png'},
-  {id: 2, product_id: 2, printImage: '2png.png'},
+  {id: '1', product_id: '1', printImage: '1png.png'},
+  {id: '2', product_id: '2', printImage: '2png.png'},
 ]
 
 
