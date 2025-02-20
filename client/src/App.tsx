@@ -3,7 +3,7 @@ import {Routes, Route, BrowserRouter as Router} from "react-router-dom";
 import Catalog from "./pages/Catalog.tsx";
 import * as React from "react";
 import Profile from "./pages/Profile.tsx";
-import {TypeBasketList, TypeProduct} from "../types/types.ts";
+import {TypeBasketList} from "../types/types.ts";
 import {useContext, useEffect} from "react";
 import {MainContext} from "./contexts/mainContext.tsx";
 import { check } from "./http/userAPI.ts";

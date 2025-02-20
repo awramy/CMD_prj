@@ -5,40 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/ProductInfo/ProductInfo.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/ProductInfo/ProductInfo.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/ProductInfo/ProductParams/ProductParams.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/ProductInfo/ProductParams/ProductParams.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Admin.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/stateStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/contexts/modalContext.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ListItem/ListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ListItem/ListItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Container/Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Container/Container.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/contexts/mainContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/contexts/mainContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/http/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/http/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/http/productAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/http/productAPI.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/productsStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/productsStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/productController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middlewares/AuthMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middlewares/AuthMW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/botRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/botRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/userRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/9e1d4067-522e-4203-a88e-6fe613a19239.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/aea1d0ac-d113-47c6-b37a-f7a84fafcfd0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/d1969260-d0f9-43aa-863a-c6957a65aba3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/static/internal/dark_background.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +101,9 @@
       <workItem from="1739519986526" duration="5084000" />
       <workItem from="1739563978779" duration="12693000" />
       <workItem from="1739632973632" duration="87690000" />
-      <workItem from="1739903896090" duration="35650000" />
+      <workItem from="1739903896090" duration="36932000" />
+      <workItem from="1740039537616" duration="9427000" />
+      <workItem from="1740058430890" duration="3279000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -447,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739740982079</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="update">
+      <option name="closed" value="true" />
+      <created>1739985048450</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1739985048450</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

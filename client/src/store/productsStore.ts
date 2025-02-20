@@ -13,7 +13,7 @@ export default class basketStore {
   setProducts(products: TypeProduct[]) {
     this._products = products
   }
-  setActiveProduct(product: TypeProduct) {
+  setActiveProduct(product: Partial<TypeProduct>) {
     this._activeProduct = product
   }
 

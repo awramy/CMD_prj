@@ -1,4 +1,6 @@
 //тип продукта (используем в сторе и компонентах)
+import React from "react";
+
 export type TypeProduct = {
   id: string;
   name: string;
@@ -20,7 +22,7 @@ export type TypeProduct = {
   }[]
 }
 
-export type TypeShowModal = [showModal: Boolean, setShowModal: (newState: boolean) => void]
+export type TypeShowModal = {showModal: boolean, setShowModal: React.Dispatch<React.SetStateAction<boolean>>}
 
 //тип элемента корзины
 export type TypeBasketItem = {

@@ -97,7 +97,9 @@
   .info_section {
     width: 100%;
     @include mixins.grid($columns: 3);
-    flex-direction: column;
+    &>:nth-child(2) {
+      grid-column: span 2;
+    }
 
     .info_item {
       min-height: 80px;
@@ -112,12 +114,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.2));
-        //backdrop-filter: blur(1px);
-      }
-
-      .info_item_title, .info_item_value {
-        z-index: 1;
+        background: linear-gradient(to bottom, rgba(241, 234, 249, 0.7),  rgba(77, 30, 130, 0.3));
+        z-index: -1;
       }
       .info_item_title {
         font-size: 0.8em;
@@ -140,6 +138,7 @@
         height: 100%;
         object-fit: cover;
         z-index: -1;
+        opacity: 0.5;
       }
     }
   }
