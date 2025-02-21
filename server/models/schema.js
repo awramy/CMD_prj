@@ -1,24 +1,33 @@
 import mongoose from "mongoose";
+import { type } from "os";
 
 const productInfoSchema = new mongoose.Schema({
   title: {
     type: String,
-    enum: ['Материал', 'Плотность ткани', 'Сезон', 'Пол', 'Объем', 'Вес'],
-    required: true },
-  description: { type: String,required: true },
+    enum: ["Материал", "Плотность ткани", "Сезон", "Пол", "Объем", "Вес"],
+    required: true,
+  },
+  description: { type: String, required: true },
   image: {
     type: String,
-    enum: ['cloth.png', 'density.png', 'season.png', 'gender.png', 'volume.png', 'weight.png'],
-  }
-})
+    enum: [
+      "cloth.png",
+      "density.png",
+      "season.png",
+      "gender.png",
+      "volume.png",
+      "weight.png",
+    ],
+  },
+});
 
 const productSchema = new mongoose.Schema({
-  name:  {type: String,required: true,},
-  price: {type: Number,required: true,},
-  image: {type: String,required: true,},
-  description: { type: String, required: true,},
-  pattern: {type: Object, required: true},
-  info: [productInfoSchema]
+  name: { type: String, required: true },
+  price: { type: Number, required: true },
+  image: { type: String, required: true },
+  description: { type: String, required: true },
+  pattern: { type: Object, required: true },
+  info: [productInfoSchema],
 });
 
 const userSchema = new mongoose.Schema({
@@ -40,13 +49,19 @@ const userSelectPhotoSchema = new mongoose.Schema({
 });
 
 const designSchema = new mongoose.Schema({
-  image : {type: String}
-})
+  image: { type: String },
+  author: { type: String },
+  user_id: { type: String },
+  user_like: { type: [String], required: true },
+  user_dislike: { type: [String], required: true },
+  like: { type: Number },
+  dislike: { type: Number },
+});
 
 const Product = mongoose.model("Product", productSchema);
 const User = mongoose.model("User", userSchema);
 const Basket = mongoose.model("Basket", basketSchema);
 const SelectPhoto = mongoose.model("SelectPhoto", userSelectPhotoSchema);
-const Design = mongoose.model("Design", designSchema)
+const Design = mongoose.model("Design", designSchema);
 
 export { Product, User, Basket, SelectPhoto, Design };
