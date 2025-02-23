@@ -29,8 +29,7 @@ class UserController {
       user = new User({
         id,
         name: name || 'New User',
-        role: role || 'USER',
-        balance: 0
+        role: role || 'USER'
       })
       await user.save();
       return res.status(200).json({user})

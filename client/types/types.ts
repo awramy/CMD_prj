@@ -32,11 +32,10 @@ export type TypeBasketItem = {
 }
 
 export type TypeBasketList = TypeBasketItem[];
-//тип инорформации о пользователе
+//тип информации о пользователе
 export type TypeUserInfo = {
   id?: number;
   name?: string;
-  balance?: number;
 }
 //тип списка всех фоток юзера
 export type TypeUserPhotos = {

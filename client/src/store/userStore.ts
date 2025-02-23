@@ -10,7 +10,6 @@ export default class userStore {
     this._userInfo = {
       id: 1234532,
       name: 'Allex_Tyan',
-      balance: 1200,
     }
     this._photos = []
     this._activePhoto = {
