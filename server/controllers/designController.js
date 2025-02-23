@@ -37,12 +37,19 @@ class DesignController {
   }
   async getDesign(req, res) {
     try {
-      const design = await Design.find({});
-      return res.status(200).json(design);
+        const designs = await Design.find({});
+        const designsWithRating = designs.map(design => {
+            const rating = design.like - design.dislike;
+            return { ...design.toObject(), rating }; 
+        });
+
+        designsWithRating.sort((a, b) => b.rating - a.rating);
+
+        return res.status(200).json(designsWithRating);
     } catch (e) {
-      return res.status(400).json({ error: e.message });
+        return res.status(400).json({ error: e.message });
     }
-  }
+}
   async like(req, res) {
     try {
       const { id, user_id } = req.body;
