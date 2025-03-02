@@ -65,8 +65,10 @@ class ProductController {
     try {
       const { name, price, image, description, pattern, info } = req.body
 
+      console.log(name, price, image, description, pattern, info);
+
       const product = new Product({
-        name, price: Number(price), image, description, pattern: JSON.parse(pattern), info: JSON.parse(info),
+        name, price: Number(price), image, description, pattern, info,
       });
 
       await product.save();
