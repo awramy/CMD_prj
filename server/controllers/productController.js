@@ -72,7 +72,8 @@ class ProductController {
       await product.save();
       res.status(201).json({ message: "Продукт успешно создан", product });
     } catch (e) {
-      return res.status(400).json({ error: e });
+      console.log(e)
+      return res.status(400).json({ error: e.message });
     }
   }
 }
