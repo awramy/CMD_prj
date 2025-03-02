@@ -13,6 +13,7 @@ const app = express();
 const port = process.env.PORT || 3005;
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
+const mongoUrl = process.env.MONGODB_URL;
 
 app.use(express.json());
 app.use(cors());
@@ -20,7 +21,7 @@ app.use(fileUpload({}))
 app.use(express.static(path.resolve(getDirname(import.meta.url), 'static')))
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/Bot')
+mongoose.connect(mongoUrl)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
