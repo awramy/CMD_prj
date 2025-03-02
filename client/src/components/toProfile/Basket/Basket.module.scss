@@ -1,3 +1,24 @@
 .basket_cont {
   width: 100%;
+
+  .basket_title {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: var(--text-color-hover);
+    display: inline-block;
+
+    svg {
+      position: relative;
+      top: +2px;
+    }
+  }
+
+  .basket_price {
+    display: inline-block;
+    float: right;
+    padding: 4px 12px;
+    background-color: var(--block-color);
+    border-radius: var(--mini-border-radius);
+    box-shadow: 1px 1px 5px var(--border-shadow-color);
+  }
 }

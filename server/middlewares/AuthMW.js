@@ -29,7 +29,7 @@ export default function (req, res, next) {
 
     //сравниваем наш сформированный хэш с хэшем, полученным от клиента
     if(hmac === hash) {
-      req.user = JSON.parse(params.get('user')).id
+      req.user = JSON.parse(params.get('user'))
       next()
     } else {
       return res.status(401).json({message: 'unauthorized'})

@@ -6,7 +6,7 @@ export const fetchLogin = async () => {
 }
 
 export const check = async () => {
-  const { data } = await $authHost.get('/user');
+  const { data } = await $authHost.get('/check');
   return data;
 }
 

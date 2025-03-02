@@ -2,7 +2,7 @@
 import React from "react";
 
 export type TypeProduct = {
-  id: string;
+  _id: string;
   name: string;
   price: number;
   image: string;
@@ -23,18 +23,19 @@ export type TypeProduct = {
 }
 
 export type TypeShowModal = {showModal: boolean, setShowModal: React.Dispatch<React.SetStateAction<boolean>>}
+export type TypeBasketContext = {basket: TypeBasketList, setBasket: React.Dispatch<React.SetStateAction<TypeBasketList>>}
 
 //тип элемента корзины
 export type TypeBasketItem = {
-  id: string;
+  _id: string;
   product_id: string;
-  printImage: string;
+  print_image: string;
 }
 
 export type TypeBasketList = TypeBasketItem[];
 //тип информации о пользователе
 export type TypeUserInfo = {
-  id?: number;
+  id?: string;
   name?: string;
 }
 //тип списка всех фоток юзера

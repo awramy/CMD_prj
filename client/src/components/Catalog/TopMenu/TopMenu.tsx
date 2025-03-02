@@ -3,32 +3,49 @@ import {ChangeEvent, useContext, useEffect, useRef, useState} from "react";
 import {fetchSelectPhoto} from "../../../http/userAPI.ts";
 import {MainContext} from "../../../contexts/mainContext.tsx";
 import {observer} from "mobx-react-lite";
+import {fetchProducts} from "../../../http/productAPI.ts";
 
 const TopMenu = observer(() => {
 
-  const { user } = useContext(MainContext)
+  //получаем контекст для изменения activePhoto
+  const { user, products } = useContext(MainContext)
+  //управление состоянием гендера(обновление каталога по гендеру)
+  const [gender, setGender] = useState<string>('')
+  //управление состоянием(выбран ли файл)
   const [file, setFile] = useState<File | null>(null)
+  //ссылка на инпут с файлом(для очистки от файла)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
+  //при выборе файла изменяем состояние setFile
   const selectFile = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setFile(e.target.files[0]);
     }
   }
+  //при очистке файла очищаем инпут и состояние файла
   const clearFile = () => {
     setFile(null)
     if(fileInputRef.current) {
       fileInputRef.current.value = ''
     }
   }
-
+  //проверка на наличие файла при изменении состояния, отправляем фото на сервер и включаем в контекст
   useEffect(() => {
     if(file instanceof File){
       fetchSelectPhoto(file)
         .then(data => {
           user.setActivePhoto(data.data)
         })
+    } else {
+      user.setActivePhoto('')
     }}, [file])
+
+  //подвязываем эффект к состоянию гендера, обновляем каталог товаров
+  useEffect(() => {
+    fetchProducts(gender)
+      .then(data => products.setProducts(data))
+      .catch(error => console.log(error))
+  }, [gender])
 
   return (
     <div className={css.top_menu}>
@@ -110,12 +127,12 @@ const TopMenu = observer(() => {
       </div>
 
       <div className={css.filter_cont}>
-        <input type="radio" id="radio-1" name="tabs" />
-        <label className={css.filter_tab} htmlFor="radio-1">Мужское<span className={css.notification}>2</span></label>
-        <input type="radio" id="radio-2" name="tabs"/>
+        <input onClick={() => setGender('')} type="radio" id="radio-1" name="tabs" />
+        <label className={css.filter_tab} htmlFor="radio-1">Главная<span className={css.notification}>2</span></label>
+        <input onClick={() => setGender('Женский')} type="radio" id="radio-2" name="tabs"/>
         <label className={css.filter_tab} htmlFor="radio-2">Женское</label>
-        <input type="radio" id="radio-3" name="tabs"/>
-        <label className={css.filter_tab} htmlFor="radio-3">Унисекс</label>
+        <input onClick={() => setGender('Мужской')} type="radio" id="radio-3" name="tabs"/>
+        <label className={css.filter_tab} htmlFor="radio-3">Мужское</label>
         <span className={css.glider}></span>
       </div>
     </div>

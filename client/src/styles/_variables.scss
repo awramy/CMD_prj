@@ -9,6 +9,7 @@
   --background-color: #f1eaf9;
   --block-color: #fff;
   --header-background-color: rgba(243, 242, 240, 0.3);
+  --border-shadow-color: rgba(0, 0, 0, 0.15);
 
   --header-height: 64px;
   --catalog-menu-height: 250px;
@@ -17,4 +18,7 @@
   --catalog-grid-columns: 2;
 
   --product-item-width: 160px;
+
+  --big-border-radius: 12px;
+  --mini-border-radius: 8px;
 }

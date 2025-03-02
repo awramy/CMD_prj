@@ -8,13 +8,11 @@ export default class userStore {
 
   constructor() {
     this._userInfo = {
-      id: 1234532,
+      id: '12345',
       name: 'Allex_Tyan',
     }
     this._photos = []
-    this._activePhoto = {
-      path: `2png.png`
-    }
+    this._activePhoto = {}
     makeAutoObservable(this)
   }
   setUserInfo(info: TypeUserInfo) {

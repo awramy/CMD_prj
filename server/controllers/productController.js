@@ -25,9 +25,20 @@ class ProductController {
   }
   async getAll (req, res) {
     try {
-      const products = await Product.find({})
+      const { gender } = req.query
+      let products = '';
+
+      if (gender === 'Мужской' || gender === 'Женский') {
+        products = await Product.find({
+          info: { $elemMatch: { description: gender } },
+        })
+      } else {
+        products = await Product.find({})
+      }
+
       return res.status(200).json(products)
     } catch (e) {
+      console.log(e)
       return res.status(400).json({ error: e.message });
     }
   }

@@ -1,20 +1,50 @@
 import css from './ProductModal.module.scss'
-import {FC, useContext} from "react";
+import {FC, useContext, useEffect, useState} from "react";
 import {MainContext} from "../../../contexts/mainContext.tsx";
-import {TypeProduct} from "../../../../types/types.ts";
+import {TypeProduct, TypeBasketItem} from "../../../../types/types.ts";
+import {checkBasketItem, createBasketItem, deleteBasketItem} from "../../../http/basketAPI.ts";
 type TypeProductModal = Partial<TypeProduct> & {
   onClick: () => void
-  show: Boolean
+  show: boolean
 }
 
 
-const ProductModal: FC<TypeProductModal> = ({onClick, show, name, price, image, description, pattern, info}) => {
+const ProductModal: FC<TypeProductModal> = ({onClick, _id, show, name, price, image, description, pattern, info}) => {
 
+  //получаем контекст для получения значения activePhoto
   const { user } = useContext(MainContext);
+  //состояние элемента в корзине(либо null, либо инфо об элементе
+  const [basketItem, setBasketItem] = useState<TypeBasketItem | null>(null)
+
+  //подвязываем эффект, при открытии модального окна проверяем есть ли в корзине
+  useEffect(() => {
+    if(user.activePhoto.path && _id) {
+      checkBasketItem(_id, user.activePhoto.path)
+        .then(data => {setBasketItem(data)})
+        .catch(() => setBasketItem(null))
+      console.log(basketItem)
+    }
+  }, [show])
+
+  //функция добавления/удаления товара из корзины
+  const fetchBasket = async () => {
+    if(user.activePhoto.path && _id && !basketItem) {
+      await createBasketItem(_id, user.activePhoto.path)
+        .then(data => setBasketItem(data))
+        .catch((e) => console.log(e.message))
+    } else if(user.activePhoto.path && _id && basketItem) {
+      await deleteBasketItem(basketItem._id)
+        .then(() => setBasketItem(null))
+        .catch((e) => console.log(e.message))
+    }
+  }
 
   return (
     <>
-    {/*<div className={css.modal_overlay}/>*/}
+    <div
+      className={`${css.modal_overlay} ${!show ? css.hide : ''}`}
+      onClick={onClick}
+    />
     <div className={`${css.container} ${!show ? css.hide : ''}`}>
       <div className={css.main_section}>
         <div className={css.image_cont}>
@@ -26,7 +56,10 @@ const ProductModal: FC<TypeProductModal> = ({onClick, show, name, price, image, 
         <div className={css.desc_cont}>
 
           <div className={css.navbar}>
-            <button className={css.basket_butt}>В корзину</button>
+            <button
+              className={`${css.basket_butt} ${!user.activePhoto.path? css.disable: basketItem? css.active: ''}`}
+              onClick={fetchBasket}
+            >{`${!user.activePhoto.path? 'Выберите принт': basketItem? 'Удалить': 'В корзину'}`}</button>
             <button
               className={css.close_butt}
               onClick={onClick}
