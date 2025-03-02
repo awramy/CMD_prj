@@ -22,7 +22,6 @@ export const MainProvider: React.FC<MainProviderProps> = ({ children }) => {
   const user = new userStore();
   const products = new productsStore();
   const initData = window.Telegram.WebApp.initDataUnsafe.user
-  const userPhoto = window.Telegram.WebApp.WebAppUser.photo_url
 
   if (initData?.id && initData.first_name) {
     const newUser = {
@@ -31,8 +30,8 @@ export const MainProvider: React.FC<MainProviderProps> = ({ children }) => {
     }
     user.setUserInfo(newUser)
   }
-  if (userPhoto) {
-    user.setPhoto(userPhoto)
+  if (initData?.photo_url) {
+    user.setPhoto(initData.photo_url);
   }
 
 

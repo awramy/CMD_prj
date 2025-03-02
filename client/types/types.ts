@@ -57,13 +57,11 @@ declare global {
             last_name?: string;
             username?: string;
             language_code?: string;
+            photo_url?: string;
           };
           auth_date?: number;
           hash?: string;
         };
-        WebAppUser: {
-          photo_url?: string;
-        }
         close: () => void;
         expand: () => void;
         isExpanded: boolean;
