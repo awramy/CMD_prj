@@ -46,6 +46,8 @@ class UserController {
 
       console.log(fileName)
 
+      console.log(getDirname(import.meta.url))
+
       photo.mv(path.resolve(getDirname(import.meta.url), '..', 'static/selectPhotos', fileName))
 
       const selectPhoto = new SelectPhoto({
