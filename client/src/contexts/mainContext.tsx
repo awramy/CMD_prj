@@ -21,6 +21,20 @@ export const MainContext = createContext<MainContextType>({
 export const MainProvider: React.FC<MainProviderProps> = ({ children }) => {
   const user = new userStore();
   const products = new productsStore();
+  const initData = window.Telegram.WebApp.initDataUnsafe.user
+  const userPhoto = window.Telegram.WebApp.WebAppUser.photo_url
+
+  if (initData?.id && initData.first_name) {
+    const newUser = {
+      id: String(initData.id),
+      name: initData.first_name
+    }
+    user.setUserInfo(newUser)
+  }
+  if (userPhoto) {
+    user.setPhoto(userPhoto)
+  }
+
 
   return (
     <MainContext.Provider value={{ user, products}}>

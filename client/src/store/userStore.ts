@@ -1,8 +1,8 @@
 import {makeAutoObservable} from "mobx";
-import {TypeActivePhoto, TypeUserInfo, TypeUserPhotos} from "../../types/types.ts";
+import {TypeActivePhoto, TypeUserInfo} from "../../types/types.ts";
 
 export default class userStore {
-  private _photos: TypeUserPhotos;
+  private _photo: string;
   private _activePhoto: TypeActivePhoto;
   private _userInfo: TypeUserInfo;
 
@@ -11,15 +11,15 @@ export default class userStore {
       id: '12345',
       name: 'Allex_Tyan',
     }
-    this._photos = []
+    this._photo = ''
     this._activePhoto = {}
     makeAutoObservable(this)
   }
   setUserInfo(info: TypeUserInfo) {
     this._userInfo = info
   }
-  setPhotos(photos: TypeUserPhotos) {
-    this._photos = photos
+  setPhoto(photo: string) {
+    this._photo = photo
   }
   setActivePhoto(activePhoto: string) {
     this._activePhoto.path = activePhoto
@@ -28,8 +28,8 @@ export default class userStore {
   get userInfo() {
     return this._userInfo
   }
-  get photos() {
-    return this._photos
+  get photo() {
+    return this._photo
   }
   get activePhoto() {
     return this._activePhoto

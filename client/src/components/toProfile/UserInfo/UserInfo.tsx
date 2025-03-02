@@ -9,7 +9,7 @@ const UserInfo = () => {
 
   return (
     <div className={css.user_info_cont}>
-      <img className={css.user_photo} src={`${import.meta.env.VITE_REACT_APP_API_URL}/userPhotos/test.jpg`} alt=''/>
+      <img className={css.user_photo} src={user.photo} alt=''/>
       <div className={css.user_info}>
         <div>Пользователь: </div>
         <p>{user.userInfo.name}</p>

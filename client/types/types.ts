@@ -38,11 +38,6 @@ export type TypeUserInfo = {
   id?: string;
   name?: string;
 }
-//тип списка всех фоток юзера
-export type TypeUserPhotos = {
-  id: number;
-  path: string;
-}[];
 //тип выбранного юзером фото
 export type TypeActivePhoto = {
   id?: number;
@@ -66,6 +61,9 @@ declare global {
           auth_date?: number;
           hash?: string;
         };
+        WebAppUser: {
+          photo_url?: string;
+        }
         close: () => void;
         expand: () => void;
         isExpanded: boolean;

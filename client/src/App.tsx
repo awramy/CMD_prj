@@ -14,6 +14,7 @@ const App: React.FC = () => {
 
   const [loading, setLoading] = React.useState<boolean>(true);
   const { products } = useContext(MainContext);
+
   useEffect(() => {
     setTimeout( () =>
     check()
