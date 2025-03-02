@@ -60,6 +60,21 @@ class ProductController {
       return res.status(400).json({ error: e });
     }
   }
+
+  async testCreateProduct(req, res) {
+    try {
+      const { name, price, image, description, pattern, info } = req.body
+
+      const product = new Product({
+        name, price: Number(price), image, description, pattern: JSON.parse(pattern), info: JSON.parse(info),
+      });
+
+      await product.save();
+      res.status(201).json({ message: "Продукт успешно создан", product });
+    } catch (e) {
+      return res.status(400).json({ error: e });
+    }
+  }
 }
 
 export default new ProductController();

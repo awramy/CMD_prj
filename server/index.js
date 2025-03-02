@@ -21,7 +21,7 @@ app.use(fileUpload({}))
 app.use(express.static(path.resolve(getDirname(import.meta.url), 'static')))
 
 
-mongoose.connect(mongoUrl)
+mongoose.connect('mongodb://127.0.0.1:27017/Bot')
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
