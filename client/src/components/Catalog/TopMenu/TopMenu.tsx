@@ -3,22 +3,21 @@ import {ChangeEvent, useContext, useEffect, useRef, useState} from "react";
 import {fetchSelectPhoto} from "../../../http/userAPI.ts";
 import {MainContext} from "../../../contexts/mainContext.tsx";
 import {observer} from "mobx-react-lite";
-import {fetchProducts} from "../../../http/productAPI.ts";
-
 const TopMenu = observer(() => {
 
   //получаем контекст для изменения activePhoto
   const { user, products } = useContext(MainContext)
-  //управление состоянием гендера(обновление каталога по гендеру)
-  const [gender, setGender] = useState<string>('')
   //управление состоянием(выбран ли файл)
   const [file, setFile] = useState<File | null>(null)
   //ссылка на инпут с файлом(для очистки от файла)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  //состояние лоадера на время загрузки файла на сервер
+  const [loading, setLoading] = useState<boolean>(false)
 
   //при выборе файла изменяем состояние setFile
   const selectFile = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
+      setLoading(true)
       setFile(e.target.files[0]);
     }
   }
@@ -34,18 +33,13 @@ const TopMenu = observer(() => {
     if(file instanceof File){
       fetchSelectPhoto(file)
         .then(data => {
+          setLoading(false)
           user.setActivePhoto(data.data)
         })
     } else {
       user.setActivePhoto('')
     }}, [file])
 
-  //подвязываем эффект к состоянию гендера, обновляем каталог товаров
-  useEffect(() => {
-    fetchProducts(gender)
-      .then(data => products.setProducts(data))
-      .catch(error => console.log(error))
-  }, [gender])
 
   return (
     <div className={css.top_menu}>
@@ -73,7 +67,7 @@ const TopMenu = observer(() => {
           ref={fileInputRef}
         />
         {
-          file &&
+          file && !loading &&
           <button
             className={css.selected_photo_info}
             onClick={clearFile}
@@ -81,6 +75,12 @@ const TopMenu = observer(() => {
             <p>...png</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024"><path fillRule="evenodd" d="M880 112c17.7 0 32 14.3 32 32v736c0 17.7-14.3 32-32 32H144c-17.7 0-32-14.3-32-32V144c0-17.7 14.3-32 32-32Zm-40 72H184v656h656zM640.013 338.826c.023.007.042.018.083.059l45.02 45.019c.04.04.05.06.058.083a.118.118 0 0 1 0 .07c-.007.022-.018.041-.059.082L557.254 512l127.861 127.862a.268.268 0 0 1 .05.06l.009.023a.118.118 0 0 1 0 .07c-.007.022-.018.041-.059.082l-45.019 45.02c-.04.04-.06.05-.083.058a.118.118 0 0 1-.07 0c-.022-.007-.041-.018-.082-.059L512 557.254L384.14 685.115c-.042.041-.06.052-.084.059a.118.118 0 0 1-.07 0c-.022-.007-.041-.018-.082-.059l-45.02-45.019a.199.199 0 0 1-.058-.083a.118.118 0 0 1 0-.07c.007-.022.018-.041.059-.082L466.745 512l-127.86-127.86a.268.268 0 0 1-.05-.061l-.009-.023a.118.118 0 0 1 0-.07c.007-.022.018-.041.059-.082l45.019-45.02c.04-.04.06-.05.083-.058a.118.118 0 0 1 .07 0c.022.007.041.018.082.059L512 466.745l127.862-127.86c.04-.041.06-.052.083-.059a.118.118 0 0 1 .07 0Z"/></svg>
           </button>
+        }
+        {
+          loading &&
+          <svg viewBox="25 25 50 50" className={css.photo_loader}>
+            <circle r="20" cy="50" cx="50"></circle>
+          </svg>
         }
         <div className={css.gradient}>
           <div className={css.effect}/>
@@ -127,11 +127,11 @@ const TopMenu = observer(() => {
       </div>
 
       <div className={css.filter_cont}>
-        <input onClick={() => setGender('')} type="radio" id="radio-1" name="tabs" />
+        <input onClick={() => products.setFilter('')} type="radio" id="radio-1" name="tabs" />
         <label className={css.filter_tab} htmlFor="radio-1">Главная<span className={css.notification}>2</span></label>
-        <input onClick={() => setGender('Женский')} type="radio" id="radio-2" name="tabs"/>
+        <input onClick={() => products.setFilter('Женский')} type="radio" id="radio-2" name="tabs"/>
         <label className={css.filter_tab} htmlFor="radio-2">Женское</label>
-        <input onClick={() => setGender('Мужской')} type="radio" id="radio-3" name="tabs"/>
+        <input onClick={() => products.setFilter('Мужской')} type="radio" id="radio-3" name="tabs"/>
         <label className={css.filter_tab} htmlFor="radio-3">Мужское</label>
         <span className={css.glider}></span>
       </div>

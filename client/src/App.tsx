@@ -16,13 +16,14 @@ const App: React.FC = () => {
   const { products } = useContext(MainContext);
 
   useEffect(() => {
-    setTimeout( () =>
     check()
       .then(() => fetchProducts())
-      .then(data => products.setProducts(data))
+      .then(data => {
+        console.log('DONE')
+        products.setProducts(data)
+      })
       .catch(err => console.log(err))
       .finally(() => setLoading(false))
-    , 1000)
   }, [])
 
   if (loading) {
