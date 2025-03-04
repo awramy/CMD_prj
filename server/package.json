@@ -21,6 +21,7 @@
     "mongoose": "^8.9.5",
     "node-telegram-bot-api": "^0.63.0",
     "nodemon": "^3.1.9",
+    "qiwi-sdk": "^4.1.4",
     "uuid": "^11.0.5"
   },
   "description": ""

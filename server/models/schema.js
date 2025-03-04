@@ -33,7 +33,8 @@ const productSchema = new mongoose.Schema({
 const userSchema = new mongoose.Schema({
   id: { type: Number, required: true, unique: true },
   name: { type: String, required: true },
-  role: { type: String, required: true, default: "User" }
+  role: { type: String, required: true, default: "User" },
+  balance: { type: Number, required: true, default: 3000 },
 });
 
 const basketSchema = new mongoose.Schema({
