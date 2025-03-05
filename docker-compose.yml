@@ -6,9 +6,12 @@ services:
       - "3000:3000"
     environment:
       NODE_ENV: development
+      MONGO_URL: mongodb://mongo:27017/CMD_PRJ  # Подключение к MongoDB
     volumes:
       - ./server:/app
       - /app/node_modules
+    depends_on:
+      - mongo  # Зависимость от MongoDB
 
   client:
     build: ./client
@@ -21,3 +24,17 @@ services:
       - /app/node_modules
     depends_on:
       - server
+
+  mongo:
+    image: mongo:latest  # Используем официальный образ MongoDB
+    container_name: mongo
+    ports:
+      - "27017:27017"  # Порт для подключения к MongoDB
+    volumes:
+      - mongo-data:/data/db  # Сохраняем данные MongoDB в volume
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root  # Опционально: имя пользователя
+      MONGO_INITDB_ROOT_PASSWORD: example  # Опционально: пароль
+
+volumes:
+  mongo-data:  # Volume для хранения данных MongoDB
