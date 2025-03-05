@@ -8,8 +8,9 @@ services:
       NODE_ENV: development
       MONGO_URL: mongodb://mongo:27017/CMD_PRJ  # Подключение к MongoDB
     volumes:
-      - ./server:/app
-      - /app/node_modules
+      - ./server:/app  # Монтируем папку server в контейнер
+      - /app/node_modules  # Исключаем node_modules из монтирования
+    command: npm run dev  # Запуск в режиме разработки
     depends_on:
       - mongo  # Зависимость от MongoDB
 
@@ -20,10 +21,11 @@ services:
     environment:
       NODE_ENV: development
     volumes:
-      - ./client:/app
-      - /app/node_modules
+      - ./client:/app  # Монтируем папку client в контейнер
+      - /app/node_modules  # Исключаем node_modules из монтирования
+    command: npm run dev  # Запуск в режиме разработки
     depends_on:
-      - server
+      - server  # Зависимость от сервера
 
   mongo:
     image: mongo:latest  # Используем официальный образ MongoDB
