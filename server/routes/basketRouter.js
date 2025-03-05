@@ -8,6 +8,6 @@ router.get('/basket/check', basketController.checkBasketItem)
 router.post('/basket', basketController.createOne)
 router.delete('/basket', basketController.deleteAll)
 router.delete('/basket/:id', basketController.deleteOne)
-// router.post('/сheckout', basketController.сheckoutCart)
+router.post('/сheckout', basketController.сheckoutCart)
 
 export default router
