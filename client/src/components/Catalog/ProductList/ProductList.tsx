@@ -20,11 +20,9 @@ const ProductList = observer(() => {
     if(products.filter === '')
       return setRenderProducts(products.products);
 
-    console.log(products.filter)
     const newProducts = products.products.filter(item => {
       return item.info.some(info_item => info_item.description === products.filter )
     })
-    console.log(newProducts)
     setRenderProducts(newProducts)
   }, [products.filter]);
 
@@ -50,7 +48,7 @@ const ProductList = observer(() => {
           )
         )
       }
-      <ProductModal onClick={() => handlerActiveProduct({})} show={showModal} _id={activeProduct?._id} name={activeProduct?.name} price={activeProduct?.price} image={activeProduct?.image} description={activeProduct?.description} pattern={activeProduct?.pattern} info={activeProduct?.info}/>
+      <ProductModal onClick={() => handlerActiveProduct({})} show={showModal} _id={activeProduct?._id} name={activeProduct?.name} price={activeProduct?.price} image={activeProduct?.image} description={activeProduct?.description} pattern={toJS(activeProduct)?.pattern} info={activeProduct?.info}/>
     </div>
   );
 });

@@ -13,7 +13,7 @@ const app = express();
 const port = process.env.PORT || 3005;
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
-const mongoUrl = process.env.MONGODB_URL;
+const mongoUrl = process.env.MONGO_URL;
 
 app.use(express.json());
 app.use(cors());
