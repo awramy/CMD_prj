@@ -6,7 +6,7 @@ import TelegramBot from 'node-telegram-bot-api';
 import botRouter from './routes/botRouter.js';
 import mainRouter from './routes/mainRouter.js';
 import fileUpload from 'express-fileupload'
-import path from "path";
+import path from  "path";
 import getDirname from "./assets/getDirname.js";
 
 const app = express();
