@@ -25,7 +25,6 @@ mongoose.connect(mongoUrl)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
-//роуты (на бота и mainRouter на приложение)
 botRouter(bot)
 app.use('/', mainRouter);
 
