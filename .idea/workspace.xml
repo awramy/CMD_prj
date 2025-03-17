@@ -5,84 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea58a4c-4f81-41c5-aae3-bd5340ee7412" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/client/src/contexts/basketContext.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/080801d7-da62-4a13-b9f7-f0a0d43b3e10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/0e25a409-bf75-4ac5-8a8b-f33514bc735f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/16eae3dd-0db5-47a2-8688-fffa5ba8f486.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/17154907-b309-4e7e-8c65-f9893aebffd3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/177da27d-6caf-44c0-9ce3-1e2f2b8a55ba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/19c5fd90-9669-48ac-9ef6-a2e0966e6056.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/1a4988bb-c889-42dc-b5a5-a305f3ce4250.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/1c2bdb2a-46c5-4a19-a5a3-a6a3f3ca5652.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/1e3de036-4384-4612-a501-6e912694cd96.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/24b49a3e-84a5-43fd-b871-1e9c1c5eb630.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/2aaa4aff-525b-4368-8579-14cda41d61b4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/2f73ddf5-8c78-4ee8-a5ce-8efe8e72e9f1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/34af56ec-7c19-418f-94c1-f4a7509a47cc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/34c541f1-cb3b-4106-a717-fd71d4001bff.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/388c791c-6f16-4f3d-adc0-4b320638f3c2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/39f65025-0684-44d1-8043-7106a4f3b6a1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/3aa4073a-bd4b-4241-be6c-662487ab34af.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/41fc4579-257c-47c0-8a74-f040f781cf51.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/47269ff8-9573-4e3d-829b-1250ed86a185.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/4c6e861d-076b-4965-8e7e-034557612855.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/59ca393a-c7ac-4200-bf08-012b664bb07d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/5b5c37e1-2721-4ee0-b84e-a1e2e924d9d3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/5bdc824b-efc1-4160-8818-774ec7fb8395.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/64372a9f-d281-45d8-ab00-9241efb5f493.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/678c0cc4-bea8-4b9f-b43e-77a901c30807.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/7268b1a6-c73d-4eb7-a303-7515959aebff.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/7631a79a-c3cd-4ec0-b2bf-5d2161440931.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/7e1dd66c-550a-4b3f-9247-d3bb053de237.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/91bc1293-3fcf-4a5e-8479-841d76a8d287.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/988e982f-f21b-4d41-91df-15be57f1f5d5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/9c6a0f41-f094-41e9-be4a-fafb6d7e7bc2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/9e31720e-6c85-4948-922b-9b9179457e87.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/9efd7ca6-24df-4ac6-8e70-945f3834bc2e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/a308e82f-7ba9-48d2-b312-7e61b1690674.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/a658d9e6-9b38-42a4-a694-74acfed7c076.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/a8d6205c-8f96-4314-9c7d-1af92e5e3cdb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/b2b202a8-d8c0-47e6-b7ee-50e0ad1c6dfb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/c092d4fe-e778-4e77-a5f6-dcd875cef39e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/c138157e-b693-45a3-a0a7-5c6b89813120.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/cdad0ceb-98fc-4779-81b8-3314dea0fa64.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/d1b1dd57-7a85-4e68-bf8d-59c7812fa727.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/d52d300c-dd4c-4df4-b9eb-a8c6c91b0a07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/e0cadff2-c0e8-4b03-ba0c-579aa116e79f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/e32c7e24-b9d3-42cf-a636-ced3cb841c6b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/e56d764f-b4f5-4764-970d-870480f5668f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/ec37083d-9144-4cc5-8579-759b0b107455.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/f280c068-1eff-4ba2-bddc-dbed9218e8a1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/f41bab72-cd50-4300-8f8d-a25486fe5362.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/selectPhotos/fc257058-3b18-4dae-b89b-c34b48ae20e4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/static/userPhotos/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/nginx.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductList/ProductList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/ProductModal/ProductModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Catalog/TopMenu/TopMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/toProfile/Basket/Basket.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/toProfile/Basket/Basket.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/toProfile/Basket/Basket.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/toProfile/Basket/Basket.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/toProfile/Basket/BasketItem/BasketItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/toProfile/Basket/BasketItem/BasketItem.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/toProfile/Basket/BasketItem/BasketItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/toProfile/Basket/BasketItem/BasketItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/toProfile/UserInfo/UserInfo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/toProfile/UserInfo/UserInfo.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/toProfile/UserInfo/UserInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/toProfile/UserInfo/UserInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/contexts/mainContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/contexts/mainContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/http/basketAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/http/basketAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/http/productAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/http/productAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/http/userAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/http/userAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/basketStore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/userStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/userStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/basketController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/basketController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/productController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/middlewares/AuthMW.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middlewares/AuthMW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/basketRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/basketRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,26 +45,27 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;new&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/avram/Documents/new/CMD_prj/server/static&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\avram\\Documents\\new\\CMD_prj\\client\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "d__client",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/avram/Documents/new/CMD_prj/server/static",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.customizations",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\avram\Documents\new\CMD_prj\server\static" />
@@ -178,6 +109,7 @@
       <workItem from="1740771760814" duration="1503000" />
       <workItem from="1740830844063" duration="28369000" />
       <workItem from="1740907629286" duration="20337000" />
+      <workItem from="1742214202421" duration="6639000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -568,6 +500,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="nginx.conf" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

@@ -1,23 +1,11 @@
-# Используем более новый образ Node.js
-FROM node:18
-
-# Устанавливаем рабочую директорию
+FROM node:22-alpine3.20 AS builder
 WORKDIR /app
-
-# Копируем package.json и package-lock.json
-COPY package*.json ./
-
-# Устанавливаем зависимости
+COPY package.json package-lock.json ./
 RUN npm install
-
-# Копируем исходный код
 COPY . .
-
-# Собираем проект
 RUN npm run build
 
-# Указываем порт, который будет использовать приложение
-EXPOSE 5173
-
-# Команда для запуска сервера разработки
-CMD ["npm", "run", "dev"]
+FROM nginx:alpine-slim AS runner
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/dist /usr/share/nginx/html
+EXPOSE 3000

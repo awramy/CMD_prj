@@ -1,17 +1,18 @@
-# Используем базовый образ Node.js
-FROM node:16
+FROM node:22-alpine
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Копируем package.json и package-lock.json
-COPY package*.json ./
+#копируем package
+COPY package.json .
 
 # Устанавливаем зависимости
 RUN npm install
 
 # Копируем исходный код
 COPY . .
+
+EXPOSE 3005
 
 # Команда для запуска приложения
 CMD ["npm", "start"]
