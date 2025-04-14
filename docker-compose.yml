@@ -26,7 +26,7 @@ services:
     depends_on:
       - server
     environment:
-      - VITE_REACT_APP_API_URL=http:/api
+      - VITE_REACT_APP_API_URL=/api
     ports:
       - '80:80'
     networks:
