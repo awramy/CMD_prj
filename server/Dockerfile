@@ -12,7 +12,7 @@ RUN npm install
 # Копируем исходный код
 COPY . .
 
-EXPOSE 3005
+EXPOSE 3000
 
 # Команда для запуска приложения
 CMD ["npm", "start"]

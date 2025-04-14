@@ -1,28 +1,46 @@
 networks:
   dev:
+    driver: bridge
+
 
 services:
-
-  nginx:
-    image: nginx:alpine-slim
-    ports:
-      - "80:80"
-    volumes:
-      - './nginx.conf:/etc/nginx/nginx.conf'
-    depends_on:
-      - server
-      - client
-    networks:
-      - dev
-
   server:
-    build:
-      context: ./server
+    build: ./server
+    container_name: server
+    depends_on:
+      - mongo  # Ждет запуска mongo (но не готовности!)
+    environment:
+      - MONGO_URL=mongodb://mongo:27017
+      - WEB_APP_URL=http://client:80
+    ports:
+      - '3000:3000'
     networks:
       - dev
 
   client:
     build:
       context: ./client
+      args:
+        - VITE_REACT_APP_API_URL=/api
+    container_name: client
+    depends_on:
+      - server
+    environment:
+      - VITE_REACT_APP_API_URL=http:/api
+    ports:
+      - '80:80'
     networks:
       - dev
+
+  mongo:
+    image: mongo:latest  # Используем последний образ MongoDB
+    container_name: 'mongo'
+    ports:
+      - "27017:27017"  # Открываем порт для доступа к MongoDB
+    volumes:
+      - mongo_data:/data/db  # Сохраняем данные в volume
+    networks:
+      - dev
+
+volumes:
+  mongo_data:  # Определяем volume для хранения данных MongoDB
